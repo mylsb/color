@@ -221,8 +221,7 @@ var Index = function Index(_ref) {
     set(starterCombination);
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    var href = "".concat(router.route, "?").concat(encodeCombination(currentCombination));
-    console.log(href);
+    var href = "".concat("/", "?").concat(encodeCombination(currentCombination));
     router.push(href, href, {
       shallow: true
     });
@@ -617,7 +616,7 @@ var Index = function Index(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 342
+      lineNumber: 344
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -627,7 +626,7 @@ var Index = function Index(_ref) {
     width: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 356
+      lineNumber: 358
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -636,13 +635,13 @@ var Index = function Index(_ref) {
     pl: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 357
+      lineNumber: 359
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Logo, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 358
+      lineNumber: 360
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(CombinationTools, {
@@ -658,7 +657,7 @@ var Index = function Index(_ref) {
     onColorClick: handleColorClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 360
+      lineNumber: 362
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -673,7 +672,7 @@ var Index = function Index(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 374
+      lineNumber: 376
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -684,7 +683,7 @@ var Index = function Index(_ref) {
     mb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 383
+      lineNumber: 385
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextButton, {
@@ -696,7 +695,7 @@ var Index = function Index(_ref) {
     color: activeTab === "url" ? "blue.4" : null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 390
+      lineNumber: 392
     },
     __self: this
   }, "URL"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextButton, {
@@ -708,7 +707,7 @@ var Index = function Index(_ref) {
     color: activeTab === "image" ? "blue.4" : null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 400
+      lineNumber: 402
     },
     __self: this
   }, "Image"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextButton, {
@@ -720,21 +719,21 @@ var Index = function Index(_ref) {
     color: activeTab === "generative" ? "blue.4" : null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 410
+      lineNumber: 412
     },
     __self: this
   }, "Generative")), activeTab === "url" && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 423
+      lineNumber: 425
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SiteFetch, {
     onSubmit: handleSiteFetch,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 424
+      lineNumber: 426
     },
     __self: this
   })), activeTab === "image" && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
@@ -743,14 +742,14 @@ var Index = function Index(_ref) {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 430
+      lineNumber: 432
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
     width: 1 / 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 431
+      lineNumber: 433
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
@@ -764,7 +763,7 @@ var Index = function Index(_ref) {
     onChange: handleImageUpload,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 432
+      lineNumber: 434
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -772,7 +771,7 @@ var Index = function Index(_ref) {
     textAlign: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 443
+      lineNumber: 445
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
@@ -791,7 +790,7 @@ var Index = function Index(_ref) {
     onClick: handleFetchFromUnsplash,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 444
+      lineNumber: 446
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Icon, {
@@ -800,21 +799,21 @@ var Index = function Index(_ref) {
     type: "unsplash",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 459
+      lineNumber: 461
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Span, {
     pl: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 460
+      lineNumber: 462
     },
     __self: this
   }, "Unsplash photo")))), paletteImage && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 467
+      lineNumber: 469
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextButton, {
@@ -822,7 +821,7 @@ var Index = function Index(_ref) {
     onClick: handleClearPalette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 468
+      lineNumber: 470
     },
     __self: this
   }, "Clear Image")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -830,14 +829,14 @@ var Index = function Index(_ref) {
     border: "1px solid rgba(0,0,0,.1)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 473
+      lineNumber: 475
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
     src: paletteImage.url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 474
+      lineNumber: 476
     },
     __self: this
   }), paletteImage.name && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(P, {
@@ -845,27 +844,27 @@ var Index = function Index(_ref) {
     fontSize: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 476
+      lineNumber: 478
     },
     __self: this
   }, "Photo by", " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextLink, {
     href: "https://unsplash.com/@".concat(paletteImage.username),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 478
+      lineNumber: 480
     },
     __self: this
   }, paletteImage.name), " ", "on", " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextLink, {
     href: "https://unsplash.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 484
+      lineNumber: 486
     },
     __self: this
   }, "Unsplash"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 493
+      lineNumber: 495
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -877,7 +876,7 @@ var Index = function Index(_ref) {
     alignItems: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 494
+      lineNumber: 496
     },
     __self: this
   }, activeTab === "generative" && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
@@ -890,7 +889,7 @@ var Index = function Index(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 503
+      lineNumber: 505
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
@@ -898,13 +897,13 @@ var Index = function Index(_ref) {
     display: "block",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 510
+      lineNumber: 512
     },
     __self: this
   }, "Base Color"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 513
+      lineNumber: 515
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextInput, {
@@ -916,7 +915,7 @@ var Index = function Index(_ref) {
     bg: palxColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 514
+      lineNumber: 516
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextInput, (_React$createElement = {
@@ -930,7 +929,7 @@ var Index = function Index(_ref) {
     width: [3 / 4]
   }, _defineProperty(_React$createElement, "type", "url"), _defineProperty(_React$createElement, "border", "0"), _defineProperty(_React$createElement, "bg", "gray.8"), _defineProperty(_React$createElement, "borderRadius", 0), _defineProperty(_React$createElement, "__source", {
     fileName: _jsxFileName,
-    lineNumber: 522
+    lineNumber: 524
   }), _defineProperty(_React$createElement, "__self", this), _React$createElement)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
     py: 3,
     width: 1 / 4,
@@ -946,34 +945,34 @@ var Index = function Index(_ref) {
     onClick: handleUsePalx,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 536
+      lineNumber: 538
     },
     __self: this
   }, "Generate"), " ")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 552
+      lineNumber: 554
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 553
+      lineNumber: 555
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Dl, {
     width: 1 / 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 554
+      lineNumber: 556
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Dt, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 555
+      lineNumber: 557
     },
     __self: this
   }, "Accessible Combos"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Dd, {
@@ -982,21 +981,21 @@ var Index = function Index(_ref) {
     ml: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 556
+      lineNumber: 558
     },
     __self: this
   }, availableCombos.length)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Dl, {
     width: 1 / 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 560
+      lineNumber: 562
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Dt, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 561
+      lineNumber: 563
     },
     __self: this
   }, "Combos with Parent Bg"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Dd, {
@@ -1005,7 +1004,7 @@ var Index = function Index(_ref) {
     ml: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 562
+      lineNumber: 564
     },
     __self: this
   }, availableCombos.length * palette.length))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Palette, {
@@ -1016,7 +1015,7 @@ var Index = function Index(_ref) {
     onAddColor: handleAddColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 567
+      lineNumber: 569
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextButton, {
@@ -1025,7 +1024,7 @@ var Index = function Index(_ref) {
     onClick: handleClearPalette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 574
+      lineNumber: 576
     },
     __self: this
   }, "Clear palette"))), currentPickerColor.color && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_outside_click_handler__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -1038,7 +1037,7 @@ var Index = function Index(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 581
+      lineNumber: 583
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ColorPicker, {
@@ -1047,7 +1046,7 @@ var Index = function Index(_ref) {
     onRemoveColor: handleRemoveColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 590
+      lineNumber: 592
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
@@ -1055,7 +1054,7 @@ var Index = function Index(_ref) {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 599
+      lineNumber: 601
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Fieldset, {
@@ -1063,7 +1062,7 @@ var Index = function Index(_ref) {
     p: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 600
+      lineNumber: 602
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Legend, {
@@ -1071,7 +1070,7 @@ var Index = function Index(_ref) {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 601
+      lineNumber: 603
     },
     __self: this
   }, "Contrast Ratio"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
@@ -1079,14 +1078,14 @@ var Index = function Index(_ref) {
     py: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 604
+      lineNumber: 606
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 605
+      lineNumber: 607
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
@@ -1098,27 +1097,27 @@ var Index = function Index(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 606
+      lineNumber: 608
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 614
+      lineNumber: 616
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 615
+      lineNumber: 617
     },
     __self: this
   }, "3:1"), " AA large")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 618
+      lineNumber: 620
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
@@ -1130,27 +1129,27 @@ var Index = function Index(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 619
+      lineNumber: 621
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 627
+      lineNumber: 629
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 628
+      lineNumber: 630
     },
     __self: this
   }, "4.5:1"), " AA")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 631
+      lineNumber: 633
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
@@ -1162,20 +1161,20 @@ var Index = function Index(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 632
+      lineNumber: 634
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 640
+      lineNumber: 642
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 641
+      lineNumber: 643
     },
     __self: this
   }, "7:1"), " AAA"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -1183,13 +1182,13 @@ var Index = function Index(_ref) {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 647
+      lineNumber: 649
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 648
+      lineNumber: 650
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
@@ -1198,7 +1197,7 @@ var Index = function Index(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 649
+      lineNumber: 651
     },
     __self: this
   }, "Border width"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
@@ -1216,14 +1215,14 @@ var Index = function Index(_ref) {
     step: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 652
+      lineNumber: 654
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 669
+      lineNumber: 671
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ColorBlindFilter, {
@@ -1231,7 +1230,7 @@ var Index = function Index(_ref) {
     currentValue: colorFilter,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 670
+      lineNumber: 672
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Likes, {
@@ -1240,7 +1239,7 @@ var Index = function Index(_ref) {
     onRemoveLike: handleRemoveLike,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 674
+      lineNumber: 676
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
@@ -1249,7 +1248,7 @@ var Index = function Index(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 679
+      lineNumber: 681
     },
     __self: this
   }, "Export Palette"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PaletteModal, {
@@ -1258,7 +1257,7 @@ var Index = function Index(_ref) {
     palette: palette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 682
+      lineNumber: 684
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -1268,7 +1267,7 @@ var Index = function Index(_ref) {
     py: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 688
+      lineNumber: 690
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(A, {
@@ -1277,7 +1276,7 @@ var Index = function Index(_ref) {
     fontWeight: 700,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 694
+      lineNumber: 696
     },
     __self: this
   }, "Cloudflare Design"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(A, {
@@ -1289,7 +1288,7 @@ var Index = function Index(_ref) {
     fontWeight: 700,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 701
+      lineNumber: 703
     },
     __self: this
   }, "GitHub")))), !lodash_isEmpty__WEBPACK_IMPORTED_MODULE_9___default()(currentCombination) && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -1299,7 +1298,7 @@ var Index = function Index(_ref) {
     borderTop: "1px solid rgba(0,0,0,.1)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 716
+      lineNumber: 718
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
@@ -1307,7 +1306,7 @@ var Index = function Index(_ref) {
     mx: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 717
+      lineNumber: 719
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextBlock, {
@@ -1315,7 +1314,7 @@ var Index = function Index(_ref) {
     currentCombination: currentCombination,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 718
+      lineNumber: 720
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(IconOutlineBlock, {
@@ -1323,7 +1322,7 @@ var Index = function Index(_ref) {
     borderWidth: borderWidth,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 722
+      lineNumber: 724
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(IconBlock, {
@@ -1331,7 +1330,7 @@ var Index = function Index(_ref) {
     borderWidth: borderWidth,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 727
+      lineNumber: 729
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FormBlock, {
@@ -1339,7 +1338,7 @@ var Index = function Index(_ref) {
     borderWidth: borderWidth,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 731
+      lineNumber: 733
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ChartsBlock, {
@@ -1347,7 +1346,7 @@ var Index = function Index(_ref) {
     borderWidth: borderWidth,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 735
+      lineNumber: 737
     },
     __self: this
   }))));
@@ -1377,4 +1376,4 @@ var Index = function Index(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.3843f810a531a7bb1737.hot-update.js.map
+//# sourceMappingURL=index.js.f13630a815ff7219df27.hot-update.js.map
