@@ -221,11 +221,8 @@ var Index = function Index(_ref) {
     set(starterCombination);
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    var href = "?".concat(encodeCombination(currentCombination));
-    console.log(currentCombination, router);
-    router.push({
-      pathname: router.pathname,
-      query: currentCombination,
+    var href = "".concat(window.location.pathname, "?").concat(encodeCombination(currentCombination));
+    router.push(href, href, {
       shallow: true
     });
   }, [currentCombination]);
@@ -1379,4 +1376,4 @@ var Index = function Index(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.0c0553c3080e703b1794.hot-update.js.map
+//# sourceMappingURL=index.js.9d2767b6accef171716f.hot-update.js.map

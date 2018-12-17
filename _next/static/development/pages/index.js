@@ -90213,11 +90213,8 @@ var Index = function Index(_ref) {
     set(starterCombination);
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    var href = "?".concat(encodeCombination(currentCombination));
-    console.log(currentCombination, router);
-    router.push({
-      pathname: router.pathname,
-      query: currentCombination,
+    var href = "".concat(window.location.pathname, "?").concat(encodeCombination(currentCombination));
+    router.push(href, href, {
       shallow: true
     });
   }, [currentCombination]);
