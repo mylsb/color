@@ -7084,11 +7084,10 @@ var _jsxFileName = "/Users/mrmrs/w/color/pages/combinations.js";
 
 var Combinations = function Combinations(_ref) {
   var pageData = _ref.pageData;
-  console.log();
   return lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2___default()(pageData) ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
     },
     __self: this
   }, pageData.combinations.map(function (combo, i) {
@@ -7098,9 +7097,10 @@ var Combinations = function Combinations(_ref) {
       borderColor: combo[1]
     };
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+      key: i,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 15
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextBlock, {
@@ -7109,7 +7109,7 @@ var Combinations = function Combinations(_ref) {
       currentCombination: currentCombination,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 16
       },
       __self: this
     }));
