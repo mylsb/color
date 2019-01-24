@@ -87927,6 +87927,7 @@ var Index = function Index() {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
+    px: [3, 4],
     maxWidth: "48rem",
     mx: "auto",
     __source: {
