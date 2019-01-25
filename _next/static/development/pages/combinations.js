@@ -1,57 +1,51 @@
 ((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/combinations.js"],{
 
-/***/ "./components/Container.js":
-/*!*********************************!*\
-  !*** ./components/Container.js ***!
-  \*********************************/
+/***/ "./components/Flex.js":
+/*!****************************!*\
+  !*** ./components/Flex.js ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Div) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../theme */ "./theme.js");
-var _jsxFileName = "/Users/mrmrs/w/color/components/Container.js";
+/* harmony import */ var react_emotion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-emotion */ "./node_modules/react-emotion/dist/index.esm.js");
+/* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
+var _jsxFileName = "/Users/mrmrs/w/color/components/Flex.js";
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
+var Div =
+/*#__PURE__*/
+Object(react_emotion__WEBPACK_IMPORTED_MODULE_1__["default"])("div", {
+  target: "e1atahoq0"
+})(styled_system__WEBPACK_IMPORTED_MODULE_2__["space"], styled_system__WEBPACK_IMPORTED_MODULE_2__["width"], styled_system__WEBPACK_IMPORTED_MODULE_2__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_2__["height"], styled_system__WEBPACK_IMPORTED_MODULE_2__["size"], styled_system__WEBPACK_IMPORTED_MODULE_2__["ratio"], styled_system__WEBPACK_IMPORTED_MODULE_2__["position"], styled_system__WEBPACK_IMPORTED_MODULE_2__["display"], styled_system__WEBPACK_IMPORTED_MODULE_2__["flex"], styled_system__WEBPACK_IMPORTED_MODULE_2__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_2__["justifyContent"], styled_system__WEBPACK_IMPORTED_MODULE_2__["flexWrap"], styled_system__WEBPACK_IMPORTED_MODULE_2__["flexDirection"], styled_system__WEBPACK_IMPORTED_MODULE_2__["alignContent"], styled_system__WEBPACK_IMPORTED_MODULE_2__["order"], styled_system__WEBPACK_IMPORTED_MODULE_2__["flexBasis"], styled_system__WEBPACK_IMPORTED_MODULE_2__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_2__["color"], styled_system__WEBPACK_IMPORTED_MODULE_2__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_2__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_2__["borderRadius"], {
+  boxSizing: "border-box"
+});
 
-var Container = function Container(_ref) {
-  var innerBg = _ref.innerBg,
-      innerWidth = _ref.innerWidth,
-      props = _objectWithoutProperties(_ref, ["innerBg", "innerWidth"]);
+var Flex = function Flex(_ref) {
+  var props = _extends({}, _ref);
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, _extends({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 57
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-    mx: "auto",
-    maxWidth: innerWidth,
-    bg: innerBg,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, props.children));
+  }), props.children);
 };
 
-Container.defaultProps = {
-  innerWidth: _theme__WEBPACK_IMPORTED_MODULE_1__["default"].containerWidth,
-  innerBg: "transparent"
+Flex.defaultProps = {
+  display: "flex",
+  flexWrap: "nowrap",
+  alignItems: "center"
 };
-/* harmony default export */ __webpack_exports__["default"] = (Container);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"]))
+/* harmony default export */ __webpack_exports__["default"] = (Flex);
 
 /***/ }),
 
@@ -64,7 +58,7 @@ Container.defaultProps = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Div, Text, Span) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(Div, Flex, Span) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! color */ "./node_modules/color/index.js");
 /* harmony import */ var color__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(color__WEBPACK_IMPORTED_MODULE_1__);
@@ -99,23 +93,16 @@ var MiniTextBlock = function MiniTextBlock(_ref) {
       lineNumber: 10
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: this
-  }, "Color: ", currentCombination.color, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
-    },
-    __self: this
-  }), "Background: ", currentCombination.bg), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, {
-    my: 0,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -123,83 +110,74 @@ var MiniTextBlock = function MiniTextBlock(_ref) {
     fontWeight: 600,
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, "Color"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+    fontSize: [3, 4],
+    fontWeight: 600,
+    display: "block",
+    mb: 2,
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: this
-  }, "Contrast"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    fontSize: [5, 6, 7],
-    fontWeight: 800,
-    display: "block",
-    mb: 3,
+  }, currentCombination.color), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+    fontSize: 2,
+    fontWeight: 600,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: this
-  }, contrast), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    fontWeight: 800,
-    fontSize: [3, 4, 5],
-    style: {
-      letterSpacing: '-.075em'
-    },
+  }, "Background"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+    fontSize: [3, 4],
+    fontWeight: 600,
+    display: "block",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: this
-  }, "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+  }, currentCombination.bg)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+    my: 0,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+    fontSize: 2,
+    fontWeight: 600,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, "Contrast"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+    fontSize: [6, 7, 8],
+    fontWeight: 800,
+    display: "block",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, contrast))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
     lineHeight: 1.5,
     display: "block",
     mt: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 43
     },
     __self: this
-  }, "Every perception of color is an illusion.. ..we do not see colors as they really are. In our perception they alter one another.")));
+  }, "Every perception of color is an illusion.. ..we do not see colors as they really are. In our perception they alter one another."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MiniTextBlock);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Text.js */ "./components/Text.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"]))
-
-/***/ }),
-
-/***/ "./components/Text.js":
-/*!****************************!*\
-  !*** ./components/Text.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-emotion */ "./node_modules/react-emotion/dist/index.esm.js");
-/* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
-
-
-var textShadow = Object(styled_system__WEBPACK_IMPORTED_MODULE_1__["style"])({
-  prop: "textShadow",
-  cssTextroperty: "textShadow",
-  key: "textShadow",
-  scale: ["1px 1px 2px pink ", "#f30 1px 0 10px", "red 2px 5px"]
-});
-var Text =
-/*#__PURE__*/
-Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("p", {
-  target: "eb2ugqd0"
-})(styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["display"], styled_system__WEBPACK_IMPORTED_MODULE_1__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontWeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["textAlign"], textShadow, styled_system__WEBPACK_IMPORTED_MODULE_1__["lineHeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderRadius"], {
-  boxSizing: "border-box",
-  transition: "all .1s ease-in"
-});
-Text.defaultTextrops = {
-  fontWeight: 400,
-  lineHeight: 1.5,
-  fontSize: 3,
-  maxWidth: "34em",
-  display: "block",
-  mb: 5
-};
-/* harmony default export */ __webpack_exports__["default"] = (Text);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"]))
 
 /***/ }),
 
@@ -7051,7 +7029,7 @@ var t=__webpack_require__(/*! react */ "./node_modules/react/index.js");function
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Container, Div, MiniTextBlock, module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(Div, MiniTextBlock, module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var unistore_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! unistore/react */ "./node_modules/unistore/react.js");
 /* harmony import */ var unistore_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(unistore_react__WEBPACK_IMPORTED_MODULE_1__);
@@ -7064,7 +7042,9 @@ var _jsxFileName = "/Users/mrmrs/w/color/pages/combinations.js";
 
 var Combinations = function Combinations(_ref) {
   var pageData = _ref.pageData;
-  return lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2___default()(pageData) ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
+  return lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2___default()(pageData) ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+    display: "flex",
+    flexWrap: "wrap",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -7077,6 +7057,7 @@ var Combinations = function Combinations(_ref) {
       borderColor: combo[1]
     };
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+      width: [1 / 2, 1 / 3],
       key: i,
       __source: {
         fileName: _jsxFileName,
@@ -7115,69 +7096,7 @@ var Combinations = function Combinations(_ref) {
       }
     })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/combinations")
   
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./components/Container.js */ "./components/Container.js")["default"], __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/MiniTextBlock.js */ "./components/MiniTextBlock.js")["default"], __webpack_require__(/*! ./../node_modules/next/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
-/***/ "./theme.js":
-/*!******************!*\
-  !*** ./theme.js ***!
-  \******************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var theme = {
-  containerWidth: '72rem',
-  breakpoints: ['36em', '48em', '64em'],
-  radii: [0, 3, 5],
-  lineHeight: [1, 1.25, 1.5],
-  measure: ['20em', '28em', '34em'],
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  fontSizes: [10, 12, 14, 16, 20, 24, 32, 48, 64, 80],
-  font: {
-    sansSerif: "-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,'Helvetica Neue',Arial,sans-serif",
-    serif: 'serif',
-    mono: 'Monaco, monospace'
-  },
-  fontWeights: [100, 400, 600, 700, 800],
-  textStyles: {
-    caps: {
-      textTransform: 'uppercase',
-      letterSpacing: '0.2em'
-    }
-  },
-  colors: {
-    red: ['#430c15', '#711423', '#a01c32', '#bf223c', '#da304c', '#e35f75', '#ec93a2', '#f3bac3', '#f9dce1', '#fcf0f2'],
-    orange: ['#341a04', '#5b2c06', '#813f09', '#a24f0b', '#b6590d', '#e06d10', '#f4a15d', '#f8c296', '#fbdbc1', '#fdf1e7'],
-    gold: ['#2c1c02', '#573905', '#744c06', '#8e5c07', '#a26a09', '#c7820a', '#f4a929', '#f8cd81', '#fbe2b6', '#fdf3e2'],
-    green: ['#0f2417', '#1c422b', '#285d3d', '#31724b', '#398557', '#46a46c', '#79c698', '#b0ddc2', '#d8eee1', '#eff8f3'],
-    cyan: ['#0c2427', '#164249', '#1d5962', '#26727e', '#2b818e', '#35a0b1', '#66c3d1', '#a5dce4', '#d0edf1', '#e9f7f9'],
-    blue: ['#0c2231', '#163d57', '#1f567a', '#276d9b', '#2c7cb0', '#479ad1', '#7cb7de', '#add2eb', '#d6e9f5', '#ebf4fa'],
-    indigo: ['#181e34', '#2c365e', '#404e88', '#5062aa', '#6373b6', '#8794c7', '#a5aed5', '#c8cde5', '#e0e3f0', '#f1f3f8'],
-    violet: ['#2d1832', '#502b5a', '#753f83', '#8e4c9e', '#9f5bb0', '#b683c3', '#c9a2d2', '#dbc1e1', '#ebddee', '#f7f1f8'],
-    gray: ['#1d1f20', '#36393a', '#4e5255', '#62676a', '#72777b', '#92979b', '#b7bbbd', '#d5d7d8', '#eaebeb', '#f7f7f8'],
-    black: '#000000',
-    white: '#ffffff',
-    marketing: {
-      orange: '#f38020',
-      lightOrange: '#faae40',
-      red: '#e04e64',
-      lightRed: '#e27179',
-      green: '#71c492',
-      lightGreen: '#9fd3b5',
-      blue: '#2da7cb',
-      lightBlue: '#89c4e1',
-      purple: '#7d4788',
-      lightPurple: '#af7baf',
-      navy: '#00517f',
-      lightNavy: '#4f8cc8',
-      gray: ['#404242', '#707070', '#aaaaaa', '#dddddd', '#f5f5f5']
-    }
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = (theme);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/MiniTextBlock.js */ "./components/MiniTextBlock.js")["default"], __webpack_require__(/*! ./../node_modules/next/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
