@@ -3109,7 +3109,7 @@ var Colorbox = function Colorbox(_ref2) {
     iconSize: 12,
     fontSize: 1,
     py: 1,
-    button: "plus",
+    button: " ",
     bg: "black",
     color: "white",
     type: "button",
@@ -7119,6 +7119,7 @@ Object(react_emotion__WEBPACK_IMPORTED_MODULE_1__["default"])("div", {
   target: "ezmqql90"
 })(styled_system__WEBPACK_IMPORTED_MODULE_2__["space"], styled_system__WEBPACK_IMPORTED_MODULE_2__["width"], styled_system__WEBPACK_IMPORTED_MODULE_2__["height"], styled_system__WEBPACK_IMPORTED_MODULE_2__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_2__["position"], styled_system__WEBPACK_IMPORTED_MODULE_2__["display"], styled_system__WEBPACK_IMPORTED_MODULE_2__["flex"], styled_system__WEBPACK_IMPORTED_MODULE_2__["flexWrap"], styled_system__WEBPACK_IMPORTED_MODULE_2__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_2__["justifyContent"], styled_system__WEBPACK_IMPORTED_MODULE_2__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_2__["textAlign"], styled_system__WEBPACK_IMPORTED_MODULE_2__["color"], styled_system__WEBPACK_IMPORTED_MODULE_2__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_2__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_2__["borderRadius"], {
   boxSizing: 'border-box',
+  width: 'auto',
   '::after': {
     content: "' '",
     display: 'table',
@@ -7156,7 +7157,7 @@ var SingleColor = function SingleColor(_ref) {
     onClick: handleActiveUI,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 56
     },
     __self: this
   });
@@ -7171,7 +7172,7 @@ var Palette = function Palette(_ref2) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ClearFix, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 84
     },
     __self: this
   }, palette.map(function (color, i) {
@@ -7184,7 +7185,7 @@ var Palette = function Palette(_ref2) {
       onClick: onClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 86
       },
       __self: this
     });
@@ -7197,7 +7198,7 @@ var Palette = function Palette(_ref2) {
     onAddColor: onAddColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 96
     },
     __self: this
   }));
@@ -8229,23 +8230,11 @@ var TextBlock = function TextBlock(_ref) {
       lineNumber: 10
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, "Color: ", currentCombination.color, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }), "Background: ", currentCombination.bg), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, {
     my: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -8253,7 +8242,7 @@ var TextBlock = function TextBlock(_ref) {
     fontWeight: 600,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 20
     },
     __self: this
   }, "Contrast"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -8263,7 +8252,7 @@ var TextBlock = function TextBlock(_ref) {
     mb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 23
     },
     __self: this
   }, contrast), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -8274,7 +8263,7 @@ var TextBlock = function TextBlock(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 26
     },
     __self: this
   }, "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -8287,7 +8276,7 @@ var TextBlock = function TextBlock(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 29
     },
     __self: this
   }, "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ()"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -8296,14 +8285,14 @@ var TextBlock = function TextBlock(_ref) {
     mt: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 32
     },
     __self: this
   }, "Every perception of color is an illusion.. ..we do not see colors as they really are. In our perception they alter one another. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
     display: ['none', 'inline'],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 34
     },
     __self: this
   }, "In order to use color effectively it is necessary to recognize that color deceives continually. In visual perception a color is almost never seen as it really is \u2014 as it physically is. This fact makes color the most relative medium in art."))));
@@ -8820,8 +8809,12 @@ Object(react_emotion__WEBPACK_IMPORTED_MODULE_1__["default"])("a", {
 })(styled_system__WEBPACK_IMPORTED_MODULE_4__["space"], styled_system__WEBPACK_IMPORTED_MODULE_4__["width"], styled_system__WEBPACK_IMPORTED_MODULE_4__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_4__["display"], styled_system__WEBPACK_IMPORTED_MODULE_4__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_4__["fontWeight"], styled_system__WEBPACK_IMPORTED_MODULE_4__["textAlign"], styled_system__WEBPACK_IMPORTED_MODULE_4__["color"], styled_system__WEBPACK_IMPORTED_MODULE_4__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_4__["justifyContent"], styled_system__WEBPACK_IMPORTED_MODULE_4__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_4__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_4__["borderRadius"], {
   boxSizing: "border-box",
   textDecoration: "none",
+  transition: 'opacity .25s ease-in-out',
+  opacity: 1,
   ":hover": {
-    pointer: "cursor"
+    cursor: "pointer",
+    opacity: .75,
+    transition: 'opacity .25s ease-in-out'
   }
 });
 A.defaultProps = {
@@ -8864,7 +8857,7 @@ var actions = function actions() {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 68
     },
     __self: this
   }), children);
@@ -9201,12 +9194,12 @@ var Img =
 Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("img", {
   target: "ehz19zk0"
 })(styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderRadius"], {
-  display: 'block',
-  maxWidth: '100%',
   borderStyle: 'none'
 });
 Img.defaultProps = {
-  width: 1
+  width: 1,
+  display: 'block',
+  maxWidth: '100%'
 };
 /* harmony default export */ __webpack_exports__["default"] = (Img);
 
@@ -109711,7 +109704,7 @@ var Index = function Index() {
       lineNumber: 431
     },
     __self: this
-  }, "Text")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
+  }, "Json")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
     display: ["none", "block"],
     position: "absolute",
     top: 0,
@@ -109895,8 +109888,8 @@ var Index = function Index() {
     },
     __self: this
   }, "Clear Image")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
-    p: 2,
-    border: "1px solid rgba(0,0,0,.1)",
+    maxWidth: 320,
+    mx: "auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 539
@@ -110042,25 +110035,27 @@ var Index = function Index() {
     __self: this
   }, "There is something wrong with the JSON provided"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Textarea, {
     border: "1px solid",
-    borderColor: "black",
+    borderColor: "gray.8",
+    p: 3,
     width: 1,
+    borderRadius: 1,
     value: importValue,
     className:
     /*#__PURE__*/
-    Object(emotion__WEBPACK_IMPORTED_MODULE_0__["css"])("resize:vertical;min-height:100px;"),
+    Object(emotion__WEBPACK_IMPORTED_MODULE_0__["css"])("resize:vertical;min-height:128px;"),
     onChange: function onChange(e) {
       return setImportValue(e.target.value);
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 635
+      lineNumber: 636
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Button, {
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
     onClick: handlePaletteImport,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 646
+      lineNumber: 649
     },
     __self: this
   }, "Import Palette")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110068,7 +110063,7 @@ var Index = function Index() {
     px: [3, 5, 6],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 650
+      lineNumber: 653
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Palette, {
@@ -110079,7 +110074,7 @@ var Index = function Index() {
     onAddColor: handleAddColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 651
+      lineNumber: 654
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110087,7 +110082,7 @@ var Index = function Index() {
     my: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 658
+      lineNumber: 661
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -110097,7 +110092,7 @@ var Index = function Index() {
     onClick: handleClearPalette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 659
+      lineNumber: 662
     },
     __self: this
   }, "Clear palette"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(A, {
@@ -110110,7 +110105,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 667
+      lineNumber: 670
     },
     __self: this
   }, "View all accessible combinations")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110118,7 +110113,7 @@ var Index = function Index() {
     mx: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 677
+      lineNumber: 680
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CombinationTools, {
@@ -110133,7 +110128,7 @@ var Index = function Index() {
     onColorClick: handleColorClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 678
+      lineNumber: 681
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110141,7 +110136,7 @@ var Index = function Index() {
     dataName: "stats",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 690
+      lineNumber: 693
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dl, {
@@ -110152,7 +110147,7 @@ var Index = function Index() {
     mb: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 691
+      lineNumber: 694
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dt, {
@@ -110160,7 +110155,7 @@ var Index = function Index() {
     width: 3 / 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 698
+      lineNumber: 701
     },
     __self: this
   }, "Accessible Combinations"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dd, {
@@ -110171,7 +110166,7 @@ var Index = function Index() {
     textAlign: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 701
+      lineNumber: 704
     },
     __self: this
   }, availableCombos.length)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dl, {
@@ -110183,7 +110178,7 @@ var Index = function Index() {
     pb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 711
+      lineNumber: 714
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dt, {
@@ -110191,7 +110186,7 @@ var Index = function Index() {
     width: 3 / 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 719
+      lineNumber: 722
     },
     __self: this
   }, "Combos with Parent Bg"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dd, {
@@ -110202,7 +110197,7 @@ var Index = function Index() {
     textAlign: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 722
+      lineNumber: 725
     },
     __self: this
   }, (availableCombos.length * palette.length).toLocaleString()))), paletteModalIsOpen && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(PaletteModal, {
@@ -110210,7 +110205,7 @@ var Index = function Index() {
     palette: palette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 735
+      lineNumber: 738
     },
     __self: this
   }))), currentPickerColor.color && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_outside_click_handler__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -110223,7 +110218,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 744
+      lineNumber: 747
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ColorPicker, {
@@ -110232,7 +110227,7 @@ var Index = function Index() {
     onRemoveColor: handleRemoveColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 753
+      lineNumber: 756
     },
     __self: this
   })))), !lodash_isEmpty__WEBPACK_IMPORTED_MODULE_8___default()(currentCombination) && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110240,7 +110235,7 @@ var Index = function Index() {
     bg: currentCombination.parentBg,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 763
+      lineNumber: 766
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110251,7 +110246,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 764
+      lineNumber: 767
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_PlayerControls__WEBPACK_IMPORTED_MODULE_23__["default"], {
@@ -110266,7 +110261,7 @@ var Index = function Index() {
     onColorClick: handleColorClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 769
+      lineNumber: 772
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110275,7 +110270,7 @@ var Index = function Index() {
     pb: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 780
+      lineNumber: 783
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Preview__WEBPACK_IMPORTED_MODULE_22__["default"], {
@@ -110284,7 +110279,7 @@ var Index = function Index() {
     currentCombination: currentCombination,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 781
+      lineNumber: 784
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110293,7 +110288,7 @@ var Index = function Index() {
     pb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 787
+      lineNumber: 790
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110305,11 +110300,12 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 788
+      lineNumber: 791
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     px: [3, 4],
+    pt: 4,
     maxWidth: "54rem",
     mx: "auto",
     style: {
@@ -110317,44 +110313,45 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 794
+      lineNumber: 797
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(H4, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 795
+      lineNumber: 798
     },
     __self: this
   }, "Docs"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_ColorTable__WEBPACK_IMPORTED_MODULE_25__["default"], {
     colors: palette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 796
+      lineNumber: 799
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     px: [3, 4],
+    pt: 5,
     maxWidth: "48rem",
     mx: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 798
+      lineNumber: 801
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(H4, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 799
+      lineNumber: 802
     },
     __self: this
   }, "Settings"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Form, {
     pt: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 800
+      lineNumber: 803
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Fieldset, {
@@ -110362,7 +110359,7 @@ var Index = function Index() {
     p: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 801
+      lineNumber: 804
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Legend, {
@@ -110370,7 +110367,7 @@ var Index = function Index() {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 802
+      lineNumber: 805
     },
     __self: this
   }, "Contrast Ratio"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
@@ -110378,14 +110375,14 @@ var Index = function Index() {
     py: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 805
+      lineNumber: 808
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 806
+      lineNumber: 809
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -110397,7 +110394,7 @@ var Index = function Index() {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 807
+      lineNumber: 810
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -110406,28 +110403,28 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 815
+      lineNumber: 818
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 816
+      lineNumber: 819
     },
     __self: this
   }, "3 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 817
+      lineNumber: 820
     },
     __self: this
   }, "AA large"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 820
+      lineNumber: 823
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -110439,7 +110436,7 @@ var Index = function Index() {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 821
+      lineNumber: 824
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -110448,28 +110445,28 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 829
+      lineNumber: 832
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 830
+      lineNumber: 833
     },
     __self: this
   }, "4.5 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 831
+      lineNumber: 834
     },
     __self: this
   }, "AA"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 834
+      lineNumber: 837
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -110481,7 +110478,7 @@ var Index = function Index() {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 835
+      lineNumber: 838
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -110490,27 +110487,27 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 843
+      lineNumber: 846
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 844
+      lineNumber: 847
     },
     __self: this
   }, "7:1 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 845
+      lineNumber: 848
     },
     __self: this
   }, "AAA")))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 851
+      lineNumber: 854
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ColorBlindFilter, {
@@ -110518,13 +110515,13 @@ var Index = function Index() {
     currentValue: colorFilter,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 852
+      lineNumber: 855
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 856
+      lineNumber: 859
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -110533,7 +110530,7 @@ var Index = function Index() {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 857
+      lineNumber: 860
     },
     __self: this
   }, "Border width"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -110551,14 +110548,14 @@ var Index = function Index() {
     step: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 860
+      lineNumber: 863
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     mt: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 875
+      lineNumber: 878
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -110567,7 +110564,7 @@ var Index = function Index() {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 876
+      lineNumber: 879
     },
     __self: this
   }, "Box Padding"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -110585,7 +110582,7 @@ var Index = function Index() {
     step: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 879
+      lineNumber: 882
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110593,7 +110590,7 @@ var Index = function Index() {
     bg: "white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 895
+      lineNumber: 898
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Likes, {
@@ -110603,7 +110600,7 @@ var Index = function Index() {
     onClearLikes: handleClearLikes,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 896
+      lineNumber: 899
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110614,7 +110611,7 @@ var Index = function Index() {
     borderTop: "1px solid rgba(0,0,0,.1)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 905
+      lineNumber: 908
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(A, {
@@ -110624,7 +110621,7 @@ var Index = function Index() {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 912
+      lineNumber: 915
     },
     __self: this
   }, "Cloudflare Design"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(A, {
@@ -110636,7 +110633,7 @@ var Index = function Index() {
     fontWeight: 700,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 921
+      lineNumber: 924
     },
     __self: this
   }, "GitHub"))));

@@ -55,49 +55,10 @@ Container.defaultProps = {
 
 /***/ }),
 
-/***/ "./components/Text.js":
-/*!****************************!*\
-  !*** ./components/Text.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-emotion */ "./node_modules/react-emotion/dist/index.esm.js");
-/* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
-
-
-var textShadow = Object(styled_system__WEBPACK_IMPORTED_MODULE_1__["style"])({
-  prop: "textShadow",
-  cssTextroperty: "textShadow",
-  key: "textShadow",
-  scale: ["1px 1px 2px pink ", "#f30 1px 0 10px", "red 2px 5px"]
-});
-var Text =
-/*#__PURE__*/
-Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("p", {
-  target: "eb2ugqd0"
-})(styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["display"], styled_system__WEBPACK_IMPORTED_MODULE_1__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontWeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["textAlign"], textShadow, styled_system__WEBPACK_IMPORTED_MODULE_1__["lineHeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderRadius"], {
-  boxSizing: "border-box",
-  transition: "all .1s ease-in"
-});
-Text.defaultTextrops = {
-  fontWeight: 400,
-  lineHeight: 1.5,
-  fontSize: 3,
-  maxWidth: "34em",
-  display: "block",
-  mb: 5
-};
-/* harmony default export */ __webpack_exports__["default"] = (Text);
-
-/***/ }),
-
-/***/ "./components/TextBlock.js":
-/*!*********************************!*\
-  !*** ./components/TextBlock.js ***!
-  \*********************************/
+/***/ "./components/MiniTextBlock.js":
+/*!*************************************!*\
+  !*** ./components/MiniTextBlock.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -107,7 +68,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! color */ "./node_modules/color/index.js");
 /* harmony import */ var color__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(color__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/mrmrs/w/color/components/TextBlock.js";
+var _jsxFileName = "/Users/mrmrs/w/color/components/MiniTextBlock.js";
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -118,7 +79,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
-var TextBlock = function TextBlock(_ref) {
+var MiniTextBlock = function MiniTextBlock(_ref) {
   var currentCombination = _ref.currentCombination,
       borderWidth = _ref.borderWidth,
       boxPadding = _ref.boxPadding,
@@ -177,7 +138,7 @@ var TextBlock = function TextBlock(_ref) {
     __self: this
   }, contrast), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
     fontWeight: 800,
-    fontSize: [4, 5, 6],
+    fontSize: [3, 4, 5],
     style: {
       letterSpacing: '-.075em'
     },
@@ -187,39 +148,58 @@ var TextBlock = function TextBlock(_ref) {
     },
     __self: this
   }, "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    fontWeight: 600,
-    fontSize: [4, 5],
-    display: "block",
-    lineHeight: 1.5,
-    style: {
-      letterSpacing: '-.1em'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ()"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
     lineHeight: 1.5,
     display: "block",
     mt: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 33
     },
     __self: this
-  }, "Every perception of color is an illusion.. ..we do not see colors as they really are. In our perception they alter one another. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    display: ['none', 'inline'],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, "In order to use color effectively it is necessary to recognize that color deceives continually. In visual perception a color is almost never seen as it really is \u2014 as it physically is. This fact makes color the most relative medium in art."))));
+  }, "Every perception of color is an illusion.. ..we do not see colors as they really are. In our perception they alter one another.")));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (TextBlock);
+/* harmony default export */ __webpack_exports__["default"] = (MiniTextBlock);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Text.js */ "./components/Text.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"]))
+
+/***/ }),
+
+/***/ "./components/Text.js":
+/*!****************************!*\
+  !*** ./components/Text.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-emotion */ "./node_modules/react-emotion/dist/index.esm.js");
+/* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
+
+
+var textShadow = Object(styled_system__WEBPACK_IMPORTED_MODULE_1__["style"])({
+  prop: "textShadow",
+  cssTextroperty: "textShadow",
+  key: "textShadow",
+  scale: ["1px 1px 2px pink ", "#f30 1px 0 10px", "red 2px 5px"]
+});
+var Text =
+/*#__PURE__*/
+Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("p", {
+  target: "eb2ugqd0"
+})(styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["display"], styled_system__WEBPACK_IMPORTED_MODULE_1__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontWeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["textAlign"], textShadow, styled_system__WEBPACK_IMPORTED_MODULE_1__["lineHeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderRadius"], {
+  boxSizing: "border-box",
+  transition: "all .1s ease-in"
+});
+Text.defaultTextrops = {
+  fontWeight: 400,
+  lineHeight: 1.5,
+  fontSize: 3,
+  maxWidth: "34em",
+  display: "block",
+  mb: 5
+};
+/* harmony default export */ __webpack_exports__["default"] = (Text);
 
 /***/ }),
 
@@ -7071,7 +7051,7 @@ var t=__webpack_require__(/*! react */ "./node_modules/react/index.js");function
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Container, Div, TextBlock, module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(Container, Div, MiniTextBlock, module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var unistore_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! unistore/react */ "./node_modules/unistore/react.js");
 /* harmony import */ var unistore_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(unistore_react__WEBPACK_IMPORTED_MODULE_1__);
@@ -7103,7 +7083,7 @@ var Combinations = function Combinations(_ref) {
         lineNumber: 15
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextBlock, {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MiniTextBlock, {
       key: i,
       boxPadding: 64,
       currentCombination: currentCombination,
@@ -7135,7 +7115,7 @@ var Combinations = function Combinations(_ref) {
       }
     })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/combinations")
   
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./components/Container.js */ "./components/Container.js")["default"], __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/TextBlock.js */ "./components/TextBlock.js")["default"], __webpack_require__(/*! ./../node_modules/next/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./components/Container.js */ "./components/Container.js")["default"], __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/MiniTextBlock.js */ "./components/MiniTextBlock.js")["default"], __webpack_require__(/*! ./../node_modules/next/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
