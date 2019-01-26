@@ -333,7 +333,8 @@ Object(react_emotion__WEBPACK_IMPORTED_MODULE_1__["default"])("button", {
   webkitAppearance: "button",
   transition: "background-color .25s ease-in",
   ":hover": {
-    backgroundColor: "rgba(255,255,255,1)",
+    opacity: "0.7",
+    transition: "opacity 0.3s ease-in",
     cursor: "pointer"
   }
 });
@@ -355,7 +356,7 @@ var ButtonPrimary = function ButtonPrimary(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, _extends({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 61
     },
     __self: this
   }), props.align === "left" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -363,14 +364,14 @@ var ButtonPrimary = function ButtonPrimary(_ref) {
     type: button,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 62
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
     px: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 63
     },
     __self: this
   }, props.children), props.align === "right" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -378,7 +379,7 @@ var ButtonPrimary = function ButtonPrimary(_ref) {
     type: button,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 66
     },
     __self: this
   }));
@@ -2760,6 +2761,7 @@ var Colorbox = function Colorbox(_ref2) {
   }, "Curve"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Select, {
     width: 1,
     name: "hueCurve",
+    "aria-label": "hue curve",
     value: form.hueCurve,
     onChange: handleInput,
     __source: {
@@ -2773,7 +2775,7 @@ var Colorbox = function Colorbox(_ref2) {
       value: c.value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 174
+        lineNumber: 175
       },
       __self: this
     }, c.label);
@@ -2783,7 +2785,7 @@ var Colorbox = function Colorbox(_ref2) {
     mb: [3, 0],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 184
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
@@ -2793,21 +2795,21 @@ var Colorbox = function Colorbox(_ref2) {
     mb: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 185
     },
     __self: this
   }, "Saturation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
     mb: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 188
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
     width: 48,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 189
     },
     __self: this
   }, "Start"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
@@ -2821,7 +2823,7 @@ var Colorbox = function Colorbox(_ref2) {
     width: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 190
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -2830,21 +2832,21 @@ var Colorbox = function Colorbox(_ref2) {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
+      lineNumber: 200
     },
     __self: this
   }, form.satStart)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
     mb: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
+      lineNumber: 204
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
     width: 48,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204
+      lineNumber: 205
     },
     __self: this
   }, "End"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
@@ -2858,7 +2860,7 @@ var Colorbox = function Colorbox(_ref2) {
     width: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205
+      lineNumber: 206
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -2867,31 +2869,32 @@ var Colorbox = function Colorbox(_ref2) {
     textAlign: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 216
     },
     __self: this
   }, form.satEnd)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
     mb: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 221
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
     pr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 222
     },
     __self: this
   }, "Curve"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Select, {
     width: 1,
     name: "satCurve",
+    "aria-label": "saturation curve",
     value: form.hueCurve,
     onChange: handleInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 223
     },
     __self: this
   }, CURVES.map(function (c, i) {
@@ -2900,7 +2903,7 @@ var Colorbox = function Colorbox(_ref2) {
       value: c.value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 229
+        lineNumber: 231
       },
       __self: this
     }, c.label);
@@ -2910,7 +2913,7 @@ var Colorbox = function Colorbox(_ref2) {
     mb: [3, 0],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237
+      lineNumber: 239
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
@@ -2920,21 +2923,21 @@ var Colorbox = function Colorbox(_ref2) {
     display: "block",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238
+      lineNumber: 240
     },
     __self: this
   }, "Luminosity"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
     mb: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
+      lineNumber: 243
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
     pr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
+      lineNumber: 244
     },
     __self: this
   }, "Start"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
@@ -2948,7 +2951,7 @@ var Colorbox = function Colorbox(_ref2) {
     max: "100",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
+      lineNumber: 245
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -2956,21 +2959,21 @@ var Colorbox = function Colorbox(_ref2) {
     textAlign: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253
+      lineNumber: 255
     },
     __self: this
   }, form.lumStart)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
     mb: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257
+      lineNumber: 259
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
     width: 48,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258
+      lineNumber: 260
     },
     __self: this
   }, "End"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
@@ -2984,7 +2987,7 @@ var Colorbox = function Colorbox(_ref2) {
     max: "100",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259
+      lineNumber: 261
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -2992,30 +2995,31 @@ var Colorbox = function Colorbox(_ref2) {
     textAlign: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269
+      lineNumber: 271
     },
     __self: this
   }, form.lumEnd)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273
+      lineNumber: 275
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, {
     pr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274
+      lineNumber: 276
     },
     __self: this
   }, "Curve"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Select, {
     width: 1,
     name: "lumCurve",
+    "aria-label": "luminosity curve",
     value: form.lumCurve,
     onChange: handleInput,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275
+      lineNumber: 277
     },
     __self: this
   }, CURVES.map(function (c, i) {
@@ -3024,7 +3028,7 @@ var Colorbox = function Colorbox(_ref2) {
       value: c.value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 282
+        lineNumber: 285
       },
       __self: this
     }, c.label);
@@ -3033,7 +3037,7 @@ var Colorbox = function Colorbox(_ref2) {
     px: [3, 5, 6],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291
+      lineNumber: 294
     },
     __self: this
   }, palette.map(function (p, i) {
@@ -3041,7 +3045,7 @@ var Colorbox = function Colorbox(_ref2) {
       key: i,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 293
+        lineNumber: 296
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
@@ -3050,7 +3054,7 @@ var Colorbox = function Colorbox(_ref2) {
       bg: p.hex,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 294
+        lineNumber: 297
       },
       __self: this
     }));
@@ -3059,7 +3063,7 @@ var Colorbox = function Colorbox(_ref2) {
     mb: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298
+      lineNumber: 301
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonPrimary, {
@@ -3075,7 +3079,7 @@ var Colorbox = function Colorbox(_ref2) {
     onClick: handleAddToPalette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 299
+      lineNumber: 302
     },
     __self: this
   }, "Add to palette"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonPrimary, {
@@ -3092,7 +3096,7 @@ var Colorbox = function Colorbox(_ref2) {
     onClick: handleReplacePalette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 317
     },
     __self: this
   }, "Replace Palette")));
@@ -111227,12 +111231,14 @@ var MainUI = function MainUI(_ref) {
     fontWeight: 700,
     fontSize: 2,
     mr: 2,
+    for: "border-width",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 881
     },
     __self: this
   }, "Border width"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
+    id: "border-width",
     value: borderWidth,
     onChange: handleBorderWidthChange,
     type: "number",
@@ -111254,19 +111260,21 @@ var MainUI = function MainUI(_ref) {
     mt: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 899
+      lineNumber: 900
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
     fontWeight: 700,
     fontSize: 2,
     mr: 2,
+    for: "box-padding",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 900
+      lineNumber: 901
     },
     __self: this
   }, "Box Padding"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
+    id: "box-padding",
     value: boxPadding,
     onChange: handleBoxPaddingChange,
     type: "number",
@@ -111281,7 +111289,7 @@ var MainUI = function MainUI(_ref) {
     step: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 903
+      lineNumber: 904
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111289,7 +111297,7 @@ var MainUI = function MainUI(_ref) {
     bg: "white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 919
+      lineNumber: 921
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Likes, {
@@ -111299,7 +111307,7 @@ var MainUI = function MainUI(_ref) {
     onClearLikes: handleClearLikes,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 920
+      lineNumber: 922
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111310,7 +111318,7 @@ var MainUI = function MainUI(_ref) {
     borderTop: "1px solid rgba(0,0,0,.1)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 929
+      lineNumber: 931
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(A, {
@@ -111320,7 +111328,7 @@ var MainUI = function MainUI(_ref) {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 936
+      lineNumber: 938
     },
     __self: this
   }, "Cloudflare Design"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(A, {
@@ -111332,7 +111340,7 @@ var MainUI = function MainUI(_ref) {
     fontWeight: 700,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 945
+      lineNumber: 947
     },
     __self: this
   }, "GitHub"))));
@@ -111363,7 +111371,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 970
+      lineNumber: 972
     },
     __self: this
   }) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(MainUI, {
@@ -111376,7 +111384,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 975
+      lineNumber: 977
     },
     __self: this
   });
