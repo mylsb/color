@@ -3613,9 +3613,11 @@ Flex.defaultProps = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Flex, TextInput, SingleComponent, Div, Badge, BadgeOutline, RadioButton) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_getContrastScore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/getContrastScore */ "./utils/getContrastScore.js");
+/* WEBPACK VAR INJECTION */(function(Flex, TextInput, SingleComponent, Div, Form, Progress, Fieldset, Legend, Label, RadioButton, BadgeOutline, Badge) {/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emotion */ "./node_modules/emotion/dist/index.esm.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utils_getContrastScore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/getContrastScore */ "./utils/getContrastScore.js");
+
 var _jsxFileName = "/Users/mrmrs/w/color/components/FormBlock.js";
 
 
@@ -3623,10 +3625,10 @@ var _jsxFileName = "/Users/mrmrs/w/color/components/FormBlock.js";
 var FormBlock = function FormBlock(_ref) {
   var borderWidth = _ref.borderWidth,
       currentCombination = _ref.currentCombination;
-  var colorParentBgContrastValue = Object(_utils_getContrastScore__WEBPACK_IMPORTED_MODULE_1__["default"])(currentCombination.color, currentCombination.parentBg);
+  var colorParentBgContrastValue = Object(_utils_getContrastScore__WEBPACK_IMPORTED_MODULE_2__["default"])(currentCombination.color, currentCombination.parentBg);
   var outlineBg = colorParentBgContrastValue < 4.5 ? currentCombination.bg : "transparent";
   var radioColor = colorParentBgContrastValue < 4.5 ? currentCombination.bg : currentCombination.color;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
     mt: 2,
     px: [3, 4],
     display: "none",
@@ -3635,7 +3637,7 @@ var FormBlock = function FormBlock(_ref) {
       lineNumber: 19
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextInput, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextInput, {
     py: 3,
     px: 4,
     mr: 1,
@@ -3647,10 +3649,10 @@ var FormBlock = function FormBlock(_ref) {
     defaultValue: "email@example.com",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SingleComponent, {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SingleComponent, {
     py: 3,
     px: 4,
     border: "1px solid",
@@ -3661,64 +3663,170 @@ var FormBlock = function FormBlock(_ref) {
     children: "Click Here",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-    mt: 4,
-    textAlign: "left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-    display: "flex",
-    alignItems: "center",
-    px: 3,
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
+    bg: currentCombination.bg,
+    p: 5,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SingleComponent, {
-    py: 2,
-    px: 4,
-    mr: 3,
-    borderRadius: 1,
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
     color: currentCombination.color,
-    bg: currentCombination.bg,
-    children: "Primary Click",
-    borderColor: currentCombination.borderColor,
-    border: "".concat(borderWidth, "px solid"),
+    mb: 3,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Badge, {
-    bg: currentCombination.bg,
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Progress, {
+    color: currentCombination.color,
+    border: "1px solid currentColor",
+    className: Object(emotion__WEBPACK_IMPORTED_MODULE_0__["css"])({
+      '&[value]::-webkit-progress-bar': {
+        backgroundColor: 'transparent'
+      },
+      '&[value]::-webkit-progress-value': {
+        backgroundColor: currentCombination.color
+      }
+    }),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Fieldset, {
+    borderRadius: 1,
+    my: 3,
+    pt: 0,
+    borderColor: currentCombination.color,
+    border: "1px solid",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Legend, {
+    fontWeight: 600,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, "Name"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
+    mx: -2,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
+    px: 2,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
+    display: "block",
+    mb: 1,
+    mt: 3,
+    fontWeight: 600,
+    fontSize: 2,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, "First"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextInput, {
+    borderRadius: 1,
+    mb: 2,
+    bg: "transparent",
+    color: "inherit",
+    borderColor: "currentColor",
+    value: "Example first name",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
+    px: 2,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
+    display: "block",
+    fontSize: 2,
+    fontWeight: 600,
+    mb: 1,
+    mt: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
+  }, "Last"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextInput, {
+    borderRadius: 1,
+    mb: 2,
+    bg: "transparent",
+    color: "inherit",
+    borderColor: "currentColor",
+    value: "Example last name",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
+    display: "block",
+    fontWeight: 600,
+    mb: 2,
+    mt: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }, "Boolean?"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
+    display: "flex",
+    alignItems: "center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RadioButton, {
+    name: "group 1",
     color: currentCombination.color,
     mr: 3,
-    borderColor: currentCombination.borderColor,
-    border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 72
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-    alignItems: "center",
-    display: "flex",
-    mt: 3,
-    bg: outlineBg,
-    p: 3,
+  }, "Yes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RadioButton, {
+    name: "group 1",
+    color: currentCombination.color,
+    checked: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 75
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SingleComponent, {
+  }, "No"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
+    mt: 4,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SingleComponent, {
     py: 2,
     px: 4,
     mr: 3,
@@ -3731,51 +3839,171 @@ var FormBlock = function FormBlock(_ref) {
     width: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 85
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BadgeOutline, {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BadgeOutline, {
     borderColor: currentCombination.color,
     color: currentCombination.color,
     width: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 97
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-    display: "flex",
-    alignItems: "center",
-    borderRadius: 2,
-    pl: 3,
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
+    mt: 4,
+    textAlign: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 105
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RadioButton, {
-    name: "group 1",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
+    px: 5,
+    mb: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
+    py: 2,
+    px: 2,
+    color: currentCombination.color,
+    bg: currentCombination.bg,
+    mb: 2,
+    borderRadius: 1,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
+    fontSize: 1,
+    display: "block",
+    mb: 1,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108
+    },
+    __self: this
+  }, " Address Line 1"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextInput, {
+    fontWeight: 600,
+    width: "auto",
+    px: 0,
+    py: 0,
+    bg: "transparent",
+    color: currentCombination.color,
+    border: "0",
+    fontSize: 3,
+    value: "6234 Spadina Avenue",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
+    py: 2,
+    px: 2,
+    color: currentCombination.color,
+    bg: currentCombination.bg,
+    borderRadius: 1,
+    mb: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Label, {
+    fontSize: 1,
+    display: "block",
+    mb: 1,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 112
+    },
+    __self: this
+  }, " Address Line 2"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextInput, {
+    fontWeight: 600,
+    width: "auto",
+    px: 0,
+    py: 0,
+    bg: "transparent",
+    color: currentCombination.color,
+    border: "0",
+    fontSize: 3,
+    value: "Suite 4201",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 113
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 113
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SingleComponent, {
+    py: 2,
+    px: 4,
+    borderRadius: 1,
+    color: currentCombination.color,
+    bg: currentCombination.bg,
+    children: "Primary Click",
+    width: "auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
+    display: "none",
+    alignItems: "center",
+    px: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SingleComponent, {
+    py: 2,
+    px: 4,
+    mr: 3,
+    borderRadius: 1,
+    color: currentCombination.color,
+    bg: currentCombination.bg,
+    children: "Primary Click",
+    borderColor: currentCombination.borderColor,
+    border: "".concat(borderWidth, "px solid"),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Badge, {
+    bg: currentCombination.bg,
     color: currentCombination.color,
     mr: 3,
+    borderColor: currentCombination.borderColor,
+    border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 137
     },
     __self: this
-  }, "Yes"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RadioButton, {
-    name: "group 1",
-    color: currentCombination.color,
-    checked: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: this
-  }, "No")))));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FormBlock);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./components/TextInput.js */ "./components/TextInput.js")["default"], __webpack_require__(/*! ./components/SingleComponent.js */ "./components/SingleComponent.js")["default"], __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Badge.js */ "./components/Badge.js")["default"], __webpack_require__(/*! ./components/BadgeOutline.js */ "./components/BadgeOutline.js")["default"], __webpack_require__(/*! ./components/RadioButton.js */ "./components/RadioButton.js")["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./components/TextInput.js */ "./components/TextInput.js")["default"], __webpack_require__(/*! ./components/SingleComponent.js */ "./components/SingleComponent.js")["default"], __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./elements/Form.js */ "./elements/Form.js")["default"], __webpack_require__(/*! ./elements/Progress.js */ "./elements/Progress.js")["default"], __webpack_require__(/*! ./elements/Fieldset.js */ "./elements/Fieldset.js")["default"], __webpack_require__(/*! ./elements/Legend.js */ "./elements/Legend.js")["default"], __webpack_require__(/*! ./elements/Label.js */ "./elements/Label.js")["default"], __webpack_require__(/*! ./components/RadioButton.js */ "./components/RadioButton.js")["default"], __webpack_require__(/*! ./components/BadgeOutline.js */ "./components/BadgeOutline.js")["default"], __webpack_require__(/*! ./components/Badge.js */ "./components/Badge.js")["default"]))
 
 /***/ }),
 
@@ -5104,14 +5332,14 @@ var IconBlock = function IconBlock(_ref) {
   var currentCombination = _ref.currentCombination,
       borderWidth = _ref.borderWidth;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-    mt: 5,
     py: [4, 5],
-    px: [3, 4, 5],
+    px: [3, 4],
     bg: currentCombination.bg,
     display: "grid",
     style: {
       justifyItems: "center",
-      gridTemplateColumns: "repeat(auto-fill, minmax(24px,48px))",
+      justifyContent: "space-around",
+      gridTemplateColumns: "repeat(auto-fill, minmax(32px,64px))",
       rowGap: '16px'
     },
     borderColor: currentCombination.borderColor,
@@ -5622,6 +5850,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
     mt: 5,
     mb: 5,
+    px: 4,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 100
@@ -5630,8 +5859,9 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
     display: "grid",
     style: {
+      justifyContent: 'space-around',
       justifyItems: "center",
-      gridTemplateColumns: "repeat(auto-fill, minmax(24px,48px))",
+      gridTemplateColumns: "repeat(auto-fill, minmax(32px,64px))",
       rowGap: '16px'
     },
     __source: {
@@ -5645,7 +5875,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 110
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5654,7 +5884,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "remove",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 115
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5663,7 +5893,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 117
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5672,7 +5902,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "caretDown",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 122
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5681,7 +5911,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 124
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5690,7 +5920,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "caretRight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 129
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5699,7 +5929,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5708,7 +5938,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "caretLeft",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 136
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5717,7 +5947,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 138
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5726,7 +5956,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "caretUp",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 143
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5735,7 +5965,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 145
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5744,7 +5974,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "pop",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 150
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5753,7 +5983,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 152
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5762,7 +5992,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "cost",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 157
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5771,7 +6001,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 159
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5780,7 +6010,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "creditCard",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 164
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5789,7 +6019,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 166
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5798,7 +6028,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "upload",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 171
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5807,7 +6037,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 173
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5816,7 +6046,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "exclamationOutline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 178
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5825,7 +6055,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
+      lineNumber: 180
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5834,7 +6064,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "exclamation",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 185
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5843,7 +6073,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 187
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5852,7 +6082,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "collapse",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 192
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5861,7 +6091,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 194
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5870,7 +6100,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "expand",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 199
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5879,7 +6109,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
+      lineNumber: 201
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5888,7 +6118,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "file",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205
+      lineNumber: 206
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5897,7 +6127,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 208
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5906,7 +6136,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "forward",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212
+      lineNumber: 213
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5915,7 +6145,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 215
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5924,7 +6154,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219
+      lineNumber: 220
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5933,7 +6163,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 222
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5942,7 +6172,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 227
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5951,7 +6181,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228
+      lineNumber: 229
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5960,7 +6190,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "down",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233
+      lineNumber: 234
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5969,7 +6199,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 236
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5978,7 +6208,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "gear",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240
+      lineNumber: 241
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5987,7 +6217,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
+      lineNumber: 243
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5996,7 +6226,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "generalInfo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247
+      lineNumber: 248
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6005,7 +6235,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249
+      lineNumber: 250
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6014,7 +6244,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "hamburger",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254
+      lineNumber: 255
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6023,7 +6253,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256
+      lineNumber: 257
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6032,7 +6262,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "info",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261
+      lineNumber: 262
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6041,7 +6271,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263
+      lineNumber: 264
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6050,7 +6280,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "help",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 268
+      lineNumber: 269
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6059,7 +6289,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270
+      lineNumber: 271
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6068,14 +6298,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "list",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275
+      lineNumber: 276
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 278
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6084,14 +6314,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "mail",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278
+      lineNumber: 279
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 280
+      lineNumber: 281
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6100,14 +6330,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "refresh",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 281
+      lineNumber: 282
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 283
+      lineNumber: 284
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6116,14 +6346,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "reorder",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284
+      lineNumber: 285
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286
+      lineNumber: 287
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6132,14 +6362,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "resizeHorizontal",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287
+      lineNumber: 288
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289
+      lineNumber: 290
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6148,14 +6378,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "minus",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 291
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292
+      lineNumber: 293
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6164,14 +6394,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "plus",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 293
+      lineNumber: 294
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 295
+      lineNumber: 296
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6180,14 +6410,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "okSign",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296
+      lineNumber: 297
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298
+      lineNumber: 299
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6196,14 +6426,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "activation",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 299
+      lineNumber: 300
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301
+      lineNumber: 302
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6212,14 +6442,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "validator",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302
+      lineNumber: 303
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 305
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6228,14 +6458,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "safeOutline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 306
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 307
+      lineNumber: 308
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6244,14 +6474,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "safe",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 309
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310
+      lineNumber: 311
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6260,14 +6490,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "warningOutline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 311
+      lineNumber: 312
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
+      lineNumber: 314
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6276,14 +6506,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "warning",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 315
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316
+      lineNumber: 317
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6292,14 +6522,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "stopOutline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 317
+      lineNumber: 318
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319
+      lineNumber: 320
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6308,14 +6538,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "stop",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 321
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322
+      lineNumber: 323
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6324,14 +6554,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "lock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 323
+      lineNumber: 324
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 325
+      lineNumber: 326
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6340,14 +6570,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "time",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 326
+      lineNumber: 327
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328
+      lineNumber: 329
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6356,14 +6586,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "quotes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329
+      lineNumber: 330
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331
+      lineNumber: 332
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6372,14 +6602,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332
+      lineNumber: 333
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 334
+      lineNumber: 335
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6388,14 +6618,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "facebook",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 335
+      lineNumber: 336
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 337
+      lineNumber: 338
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6404,14 +6634,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "google",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 338
+      lineNumber: 339
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 340
+      lineNumber: 341
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6420,14 +6650,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "linkedin",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341
+      lineNumber: 342
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 343
+      lineNumber: 344
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6436,14 +6666,14 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "download",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 344
+      lineNumber: 345
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 346
+      lineNumber: 347
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6452,7 +6682,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "wrench",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 347
+      lineNumber: 348
     },
     __self: this
   }))));
@@ -7879,27 +8109,57 @@ var PlayerControls = function PlayerControls(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Div, TextBlock, IconOutlineBlock, IconBlock, FormBlock, ChartsBlock) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(Flex, Div, TextBlock, IconBlock, IconOutlineBlock, FormBlock, ChartsBlock) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "/Users/mrmrs/w/color/components/Preview.js";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 /* harmony default export */ __webpack_exports__["default"] = (Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"])(function (_ref) {
+  var _React$createElement;
+
   var boxPadding = _ref.boxPadding,
       borderWidth = _ref.borderWidth,
       currentCombination = _ref.currentCombination;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+    flexWrap: "wrap",
+    pb: 4,
+    alignItems: "flex-start",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextBlock, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, (_React$createElement = {
+    px: [3, 0],
+    width: [1, 1 / 2, 1 / 3]
+  }, _defineProperty(_React$createElement, "px", 3), _defineProperty(_React$createElement, "__source", {
+    fileName: _jsxFileName,
+    lineNumber: 9
+  }), _defineProperty(_React$createElement, "__self", this), _React$createElement), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextBlock, {
     borderWidth: borderWidth,
     boxPadding: boxPadding,
     currentCombination: currentCombination,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+    width: [1, 1 / 2, 1 / 3],
+    px: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconBlock, {
+    currentCombination: currentCombination,
+    borderWidth: borderWidth,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutlineBlock, {
@@ -7907,26 +8167,18 @@ var _jsxFileName = "/Users/mrmrs/w/color/components/Preview.js";
     borderWidth: borderWidth,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 21
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconBlock, {
-    currentCombination: currentCombination,
-    borderWidth: borderWidth,
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+    width: [1, 1 / 2, 1 / 3],
+    px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 26
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormBlock, {
-    currentCombination: currentCombination,
-    borderWidth: borderWidth,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ChartsBlock, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormBlock, {
     currentCombination: currentCombination,
     borderWidth: borderWidth,
     __source: {
@@ -7934,9 +8186,34 @@ var _jsxFileName = "/Users/mrmrs/w/color/components/Preview.js";
       lineNumber: 27
     },
     __self: this
-  }));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+    width: [1, 1 / 2, 1 / 3],
+    px: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+    width: [1, 1 / 2, 1 / 3],
+    px: 3,
+    display: "none",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ChartsBlock, {
+    currentCombination: currentCombination,
+    borderWidth: borderWidth,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  })));
 }));
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/TextBlock.js */ "./components/TextBlock.js")["default"], __webpack_require__(/*! ./components/IconOutlineBlock.js */ "./components/IconOutlineBlock.js")["default"], __webpack_require__(/*! ./components/IconBlock.js */ "./components/IconBlock.js")["default"], __webpack_require__(/*! ./components/FormBlock.js */ "./components/FormBlock.js")["default"], __webpack_require__(/*! ./components/ChartsBlock.js */ "./components/ChartsBlock.js")["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/TextBlock.js */ "./components/TextBlock.js")["default"], __webpack_require__(/*! ./components/IconBlock.js */ "./components/IconBlock.js")["default"], __webpack_require__(/*! ./components/IconOutlineBlock.js */ "./components/IconOutlineBlock.js")["default"], __webpack_require__(/*! ./components/FormBlock.js */ "./components/FormBlock.js")["default"], __webpack_require__(/*! ./components/ChartsBlock.js */ "./components/ChartsBlock.js")["default"]))
 
 /***/ }),
 
@@ -8392,10 +8669,11 @@ Text.defaultTextrops = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Div, Text, Span) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(Div, Text, Span, H1, Time, Code, P, Footer) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! color */ "./node_modules/color/index.js");
 /* harmony import */ var color__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(color__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _elements_Blockquote__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../elements/Blockquote */ "./elements/Blockquote.js");
 var _jsxFileName = "/Users/mrmrs/w/color/components/TextBlock.js";
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -8403,6 +8681,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -8424,14 +8703,14 @@ var TextBlock = function TextBlock(_ref) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, {
     my: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -8439,7 +8718,7 @@ var TextBlock = function TextBlock(_ref) {
     fontWeight: 600,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, "Contrast"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -8449,54 +8728,160 @@ var TextBlock = function TextBlock(_ref) {
     mb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
-  }, contrast), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+  }, contrast), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H1, {
     fontWeight: 800,
-    fontSize: [4, 5, 6],
-    style: {
-      letterSpacing: '-.075em'
-    },
+    fontSize: [4, 4, 6],
+    mt: 0,
+    mb: 2,
+    borderBottom: "4px solid currentColor",
+    pb: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
-  }, "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    fontWeight: 600,
-    fontSize: [4, 5],
+  }, "A Sample Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Time, {
     display: "block",
-    lineHeight: 1.5,
-    style: {
-      letterSpacing: '-.1em'
-    },
+    fontSize: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: this
-  }, "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ()"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, "22 January 2012")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+    fontSize: 3,
     lineHeight: 1.5,
     display: "block",
     mt: 3,
+    mb: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
-  }, "Every perception of color is an illusion.. ..we do not see colors as they really are. In our perception they alter one another. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+  }, "Every perception of color is an illusion.. ..we do not see colors as they really are. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, "In our perception they alter one another."), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
     display: ['none', 'inline'],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
-  }, "In order to use color effectively it is necessary to recognize that color deceives continually. In visual perception a color is almost never seen as it really is \u2014 as it physically is. This fact makes color the most relative medium in art."))));
+  }, "In order to use color effectively it is ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, "necessary to recognize that color deceives continually.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, "In visual perception a color is almost never seen as it really is \u2014 as it physically is. This fact makes color the most relative medium in art."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Code, {
+    border: "1px solid currentColor",
+    borderRadius: 3,
+    p: 3,
+    mt: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, "// This is a code comment", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }), "/* Another type of code comment */", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }), "<article>", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }), "\xA0\xA0<h1>A title example</h1>", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }), "\xA0\xA0<h2>A subtitle example</h2>", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }), "\xA0\xA0<p>And this would be some paragraph text.</p>", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }), "</article>"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_elements_Blockquote__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    borderLeft: "4px solid currentColor",
+    ml: 0,
+    pl: 3,
+    mt: 4,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(P, {
+    fontSize: [3, 4],
+    mb: 2,
+    fontWeight: 600,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, "Color is my day-long obsession, joy and torment."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Footer, {
+    fontSize: 2,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: this
+  }, "Claude Monet"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TextBlock);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Text.js */ "./components/Text.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Text.js */ "./components/Text.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"], __webpack_require__(/*! ./elements/H1.js */ "./elements/H1.js")["default"], __webpack_require__(/*! ./elements/Time.js */ "./elements/Time.js")["default"], __webpack_require__(/*! ./elements/Code.js */ "./elements/Code.js")["default"], __webpack_require__(/*! ./elements/P.js */ "./elements/P.js")["default"], __webpack_require__(/*! ./elements/Footer.js */ "./elements/Footer.js")["default"]))
 
 /***/ }),
 
@@ -9089,6 +9474,33 @@ Article.defaultProps = {
 
 /***/ }),
 
+/***/ "./elements/Blockquote.js":
+/*!********************************!*\
+  !*** ./elements/Blockquote.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-emotion */ "./node_modules/react-emotion/dist/index.esm.js");
+/* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
+
+
+var Blockquote =
+/*#__PURE__*/
+Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("blockquote", {
+  target: "e1bgxky20"
+})(styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["height"], styled_system__WEBPACK_IMPORTED_MODULE_1__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["position"], styled_system__WEBPACK_IMPORTED_MODULE_1__["display"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flex"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexWrap"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_1__["justifyContent"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["textAlign"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderRadius"], {
+  boxSizing: "border-box"
+});
+Blockquote.defaultProps = {
+  width: 1
+};
+/* harmony default export */ __webpack_exports__["default"] = (Blockquote);
+
+/***/ }),
+
 /***/ "./elements/Button.js":
 /*!****************************!*\
   !*** ./elements/Button.js ***!
@@ -9169,7 +9581,8 @@ var Code =
 Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("code", {
   target: "ebe0sl0"
 })(styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["display"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderRadius"], {
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
+  display: 'block'
 });
 Code.defaultProps = {};
 /* harmony default export */ __webpack_exports__["default"] = (Code);
@@ -9298,6 +9711,31 @@ Fieldset.defaultProps = {};
 
 /***/ }),
 
+/***/ "./elements/Footer.js":
+/*!****************************!*\
+  !*** ./elements/Footer.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-emotion */ "./node_modules/react-emotion/dist/index.esm.js");
+/* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
+
+
+var Footer =
+/*#__PURE__*/
+Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("footer", {
+  target: "e10oelxz0"
+})(styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["display"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flex"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_1__["justifyContent"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["textAlign"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderRadius"], {
+  boxSizing: 'border-box'
+});
+Footer.defaultProps = {};
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
 /***/ "./elements/Form.js":
 /*!**************************!*\
   !*** ./elements/Form.js ***!
@@ -9320,6 +9758,31 @@ Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("form", {
 });
 Form.defaultProps = {};
 /* harmony default export */ __webpack_exports__["default"] = (Form);
+
+/***/ }),
+
+/***/ "./elements/H1.js":
+/*!************************!*\
+  !*** ./elements/H1.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-emotion */ "./node_modules/react-emotion/dist/index.esm.js");
+/* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
+
+
+var H1 =
+/*#__PURE__*/
+Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("h1", {
+  target: "e18dw5m0"
+})(styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["display"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_1__["justifyContent"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontWeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["lineHeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderColor"], {
+  boxSizing: 'border-box'
+});
+H1.defaultProps = {};
+/* harmony default export */ __webpack_exports__["default"] = (H1);
 
 /***/ }),
 
@@ -9569,6 +10032,41 @@ Polyline.defaultProps = {
 
 /***/ }),
 
+/***/ "./elements/Progress.js":
+/*!******************************!*\
+  !*** ./elements/Progress.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-emotion */ "./node_modules/react-emotion/dist/index.esm.js");
+/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../theme */ "./theme.js");
+/* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
+
+
+
+var Progress =
+/*#__PURE__*/
+Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("progress", {
+  target: "e1qom6130"
+})(styled_system__WEBPACK_IMPORTED_MODULE_2__["space"], styled_system__WEBPACK_IMPORTED_MODULE_2__["width"], styled_system__WEBPACK_IMPORTED_MODULE_2__["height"], styled_system__WEBPACK_IMPORTED_MODULE_2__["display"], styled_system__WEBPACK_IMPORTED_MODULE_2__["color"], styled_system__WEBPACK_IMPORTED_MODULE_2__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_2__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_2__["borderRadius"], {
+  overflow: 'hidden',
+  webkitAppearance: 'none',
+  appearance: 'none',
+  verticalAlign: 'top'
+});
+Progress.defaultProps = {
+  width: 1,
+  height: 8,
+  max: 100,
+  value: 64
+};
+/* harmony default export */ __webpack_exports__["default"] = (Progress);
+
+/***/ }),
+
 /***/ "./elements/Rect.js":
 /*!**************************!*\
   !*** ./elements/Rect.js ***!
@@ -9781,6 +10279,29 @@ Thead.defaultProps = {
   width: 1
 };
 /* harmony default export */ __webpack_exports__["default"] = (Thead);
+
+/***/ }),
+
+/***/ "./elements/Time.js":
+/*!**************************!*\
+  !*** ./elements/Time.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-emotion */ "./node_modules/react-emotion/dist/index.esm.js");
+/* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
+
+
+var Time =
+/*#__PURE__*/
+Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("time", {
+  target: "e14butin0"
+})(styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["display"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontWeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["textAlign"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderColor"], {});
+Time.defaultProps = {};
+/* harmony default export */ __webpack_exports__["default"] = (Time);
 
 /***/ }),
 
@@ -110428,31 +110949,22 @@ var MainUI = function MainUI(_ref) {
       lineNumber: 776
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
-    maxWidth: "48rem",
-    mx: "auto",
-    pb: 4,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 787
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Preview__WEBPACK_IMPORTED_MODULE_22__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Preview__WEBPACK_IMPORTED_MODULE_22__["default"], {
     borderWidth: borderWidth,
     boxPadding: boxPadding,
     currentCombination: currentCombination,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 788
+      lineNumber: 787
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     bg: "white",
     color: "gray.0",
     pb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 794
+      lineNumber: 792
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110464,7 +110976,7 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 795
+      lineNumber: 793
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110477,21 +110989,21 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 801
+      lineNumber: 799
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(H4, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 808
+      lineNumber: 806
     },
     __self: this
   }, "Docs"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_ColorTable__WEBPACK_IMPORTED_MODULE_25__["default"], {
     colors: palette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 809
+      lineNumber: 807
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110499,7 +111011,7 @@ var MainUI = function MainUI(_ref) {
     textAlign: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 810
+      lineNumber: 808
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -110514,7 +111026,7 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 811
+      lineNumber: 809
     },
     __self: this
   }, "Export Palette"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110524,21 +111036,21 @@ var MainUI = function MainUI(_ref) {
     mx: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 824
+      lineNumber: 822
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(H4, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 825
+      lineNumber: 823
     },
     __self: this
   }, "Settings"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Form, {
     pt: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 826
+      lineNumber: 824
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Fieldset, {
@@ -110546,7 +111058,7 @@ var MainUI = function MainUI(_ref) {
     p: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 827
+      lineNumber: 825
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Legend, {
@@ -110554,7 +111066,7 @@ var MainUI = function MainUI(_ref) {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 828
+      lineNumber: 826
     },
     __self: this
   }, "Contrast Ratio"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
@@ -110562,14 +111074,14 @@ var MainUI = function MainUI(_ref) {
     py: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 831
+      lineNumber: 829
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 832
+      lineNumber: 830
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -110581,7 +111093,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 833
+      lineNumber: 831
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -110590,28 +111102,28 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 841
+      lineNumber: 839
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 842
+      lineNumber: 840
     },
     __self: this
   }, "3 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 843
+      lineNumber: 841
     },
     __self: this
   }, "AA large"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 846
+      lineNumber: 844
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -110623,7 +111135,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 847
+      lineNumber: 845
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -110632,28 +111144,28 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 855
+      lineNumber: 853
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 856
+      lineNumber: 854
     },
     __self: this
   }, "4.5 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 857
+      lineNumber: 855
     },
     __self: this
   }, "AA"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 860
+      lineNumber: 858
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -110665,7 +111177,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 861
+      lineNumber: 859
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -110674,27 +111186,27 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 869
+      lineNumber: 867
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 870
+      lineNumber: 868
     },
     __self: this
   }, "7:1 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 871
+      lineNumber: 869
     },
     __self: this
   }, "AAA")))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 877
+      lineNumber: 875
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ColorBlindFilter, {
@@ -110702,13 +111214,13 @@ var MainUI = function MainUI(_ref) {
     currentValue: colorFilter,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 878
+      lineNumber: 876
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 882
+      lineNumber: 880
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -110717,7 +111229,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 883
+      lineNumber: 881
     },
     __self: this
   }, "Border width"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -110735,14 +111247,14 @@ var MainUI = function MainUI(_ref) {
     step: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 886
+      lineNumber: 884
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     mt: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 901
+      lineNumber: 899
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -110751,7 +111263,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 902
+      lineNumber: 900
     },
     __self: this
   }, "Box Padding"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -110769,7 +111281,7 @@ var MainUI = function MainUI(_ref) {
     step: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 905
+      lineNumber: 903
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110777,7 +111289,7 @@ var MainUI = function MainUI(_ref) {
     bg: "white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 921
+      lineNumber: 919
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Likes, {
@@ -110787,7 +111299,7 @@ var MainUI = function MainUI(_ref) {
     onClearLikes: handleClearLikes,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 922
+      lineNumber: 920
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -110798,7 +111310,7 @@ var MainUI = function MainUI(_ref) {
     borderTop: "1px solid rgba(0,0,0,.1)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 931
+      lineNumber: 929
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(A, {
@@ -110808,7 +111320,7 @@ var MainUI = function MainUI(_ref) {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 938
+      lineNumber: 936
     },
     __self: this
   }, "Cloudflare Design"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(A, {
@@ -110820,7 +111332,7 @@ var MainUI = function MainUI(_ref) {
     fontWeight: 700,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 947
+      lineNumber: 945
     },
     __self: this
   }, "GitHub"))));
@@ -110851,7 +111363,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 972
+      lineNumber: 970
     },
     __self: this
   }) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(MainUI, {
@@ -110864,7 +111376,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 977
+      lineNumber: 975
     },
     __self: this
   });
