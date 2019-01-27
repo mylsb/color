@@ -3344,7 +3344,7 @@ var Combinations = function Combinations(_ref) {
       borderColor: combo[1]
     };
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
-      width: [1, 1 / 2, 1 / 3],
+      width: [1, 1 / 2, 1 / 4],
       key: i,
       className:
       /*#__PURE__*/
@@ -3356,7 +3356,6 @@ var Combinations = function Combinations(_ref) {
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MiniTextBlock, {
       key: i,
-      boxPadding: 64,
       currentCombination: currentCombination,
       __source: {
         fileName: _jsxFileName,
@@ -3370,7 +3369,7 @@ var Combinations = function Combinations(_ref) {
       Object(emotion__WEBPACK_IMPORTED_MODULE_0__["css"])("position:fixed;top:0;right:0;backface-visibility:hidden;"),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 24
       },
       __self: this
     }, "Close"));
@@ -7628,7 +7627,7 @@ var Logo = function Logo(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Div, Flex, Span) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(Div, Flex, P, Code, Span) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! color */ "./node_modules/color/index.js");
 /* harmony import */ var color__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(color__WEBPACK_IMPORTED_MODULE_1__);
@@ -7651,11 +7650,10 @@ var MiniTextBlock = function MiniTextBlock(_ref) {
 
   var contrast = color__WEBPACK_IMPORTED_MODULE_1___default()(currentCombination.bg).contrast(color__WEBPACK_IMPORTED_MODULE_1___default()(currentCombination.color)).toFixed(2);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, _extends({
-    borderColor: currentCombination.borderColor,
-    border: "".concat(borderWidth, "px solid"),
-    p: boxPadding,
-    color: currentCombination.color,
-    bg: currentCombination.bg,
+    border: "1px solid #eee",
+    p: 4,
+    bg: "white",
+    color: "gray.0",
     textAlign: "left"
   }, props, {
     __source: {
@@ -7666,55 +7664,85 @@ var MiniTextBlock = function MiniTextBlock(_ref) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(P, {
+    my: 0,
+    px: 4,
+    fontWeight: 700,
+    fontSize: 5,
+    bg: currentCombination.bg,
+    color: currentCombination.color,
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+  }, "Aa"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(P, {
+    my: 0,
+    px: 4,
+    fontWeight: 700,
+    fontSize: 5,
+    bg: currentCombination.color,
+    color: currentCombination.bg,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
+    },
+    __self: this
+  }, "Aa"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Code, {
+    ml: 3,
+    style: {
+      textTransform: 'uppercase'
+    },
+    fontSize: [2],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    fontSize: 2,
-    fontWeight: 600,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, "Color"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    fontSize: [3, 4],
-    fontWeight: 600,
-    display: "block",
-    mb: 2,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, currentCombination.color), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    fontSize: 2,
-    fontWeight: 600,
+    display: "inline-block",
+    height: 8,
+    width: 8,
+    borderRadius: 9999,
+    bg: currentCombination.color,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: this
-  }, "Background"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    fontSize: [3, 4],
-    fontWeight: 600,
-    display: "block",
+  }), " ", currentCombination.color, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 27
     },
     __self: this
-  }, currentCombination.bg)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-    my: 0,
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+    display: "inline-block",
+    height: 8,
+    width: 8,
+    borderRadius: 9999,
+    bg: currentCombination.bg,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 28
+    },
+    __self: this
+  }), " ", currentCombination.bg)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+    my: 0,
+    ml: "auto",
+    width: "auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -7722,32 +7750,23 @@ var MiniTextBlock = function MiniTextBlock(_ref) {
     fontWeight: 600,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 32
     },
     __self: this
   }, "Contrast"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    fontSize: [6, 7, 8],
+    fontSize: [5],
     fontWeight: 800,
     display: "block",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 35
     },
     __self: this
-  }, contrast))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    lineHeight: 1.5,
-    display: "block",
-    mt: 3,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }, "Every perception of color is an illusion.. ..we do not see colors as they really are. In our perception they alter one another."));
+  }, contrast))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MiniTextBlock);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./elements/P.js */ "./elements/P.js")["default"], __webpack_require__(/*! ./elements/Code.js */ "./elements/Code.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"]))
 
 /***/ }),
 
@@ -9034,6 +9053,77 @@ SiteFooter.defaultProps = {
 };
 /* harmony default export */ __webpack_exports__["default"] = (SiteFooter);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Footer.js */ "./elements/Footer.js")["default"], __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./elements/A.js */ "./elements/A.js")["default"], __webpack_require__(/*! ./components/Logo.js */ "./components/Logo.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"], __webpack_require__(/*! ./elements/P.js */ "./elements/P.js")["default"], __webpack_require__(/*! ./elements/H4.js */ "./elements/H4.js")["default"]))
+
+/***/ }),
+
+/***/ "./components/SlabStat.js":
+/*!********************************!*\
+  !*** ./components/SlabStat.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(Dl, Dt, Dd) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/mrmrs/w/color/components/SlabStat.js";
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+var SlabStat = function SlabStat(_ref) {
+  var term = _ref.term,
+      description = _ref.description,
+      props = _objectWithoutProperties(_ref, ["term", "description"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Dl, _extends({}, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Dt, {
+    fontSize: 1,
+    mb: 1,
+    children: term,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Dd, {
+    ml: 0,
+    fontSize: [2, 3, 4],
+    fontWeight: 700,
+    maxWidth: "34em",
+    children: description,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }));
+};
+
+SlabStat.propTypes = {
+  term: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  description: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+SlabStat.defaultProps = {
+  term: "This is a label",
+  description: "A short description"
+};
+/* harmony default export */ __webpack_exports__["default"] = (SlabStat);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Dl.js */ "./elements/Dl.js")["default"], __webpack_require__(/*! ./elements/Dt.js */ "./elements/Dt.js")["default"], __webpack_require__(/*! ./elements/Dd.js */ "./elements/Dd.js")["default"]))
 
 /***/ }),
 
@@ -110309,7 +110399,7 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Div, TextButton, SiteFetch, Flex, Input, Label, P, Button, Icon, Span, LoadingBars, Img, TextLink, Form, TextInput, Textarea, Palette, CombinationTools, Dl, Dt, Dd, PaletteModal, ColorPicker, H4, Fieldset, Legend, ColorBlindFilter, Likes, SiteFooter, Combinations, module) {/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emotion */ "./node_modules/emotion/dist/index.esm.js");
+/* WEBPACK VAR INJECTION */(function(Div, TextButton, SiteFetch, Flex, Input, Label, P, Button, Icon, Span, LoadingBars, Img, TextLink, Form, TextInput, Textarea, Palette, CombinationTools, Dl, Dt, Dd, PaletteModal, ColorPicker, H4, SlabStat, Fieldset, Legend, ColorBlindFilter, Likes, SiteFooter, Combinations, module) {/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emotion */ "./node_modules/emotion/dist/index.esm.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -111673,16 +111763,49 @@ var MainUI = function MainUI(_ref) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(H4, {
     fontSize: 2,
+    mb: 4,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 806
     },
     __self: this
-  }, "Docs"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_ColorTable__WEBPACK_IMPORTED_MODULE_25__["default"], {
-    colors: palette,
+  }, "Docs"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 807
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SlabStat, {
+    term: "Colors",
+    description: palette.length,
+    mr: 4,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 808
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SlabStat, {
+    term: "Accessible Combinations",
+    description: availableCombos.length,
+    mr: 4,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 813
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SlabStat, {
+    term: "Accessible Combinations with Parent Background",
+    description: availableCombos.length * palette.length,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 818
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_ColorTable__WEBPACK_IMPORTED_MODULE_25__["default"], {
+    colors: palette,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 824
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111690,7 +111813,7 @@ var MainUI = function MainUI(_ref) {
     textAlign: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 808
+      lineNumber: 825
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -111705,7 +111828,7 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 809
+      lineNumber: 826
     },
     __self: this
   }, "Export Palette"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111714,21 +111837,21 @@ var MainUI = function MainUI(_ref) {
     px: [3, 4],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 822
+      lineNumber: 839
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(H4, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 823
+      lineNumber: 840
     },
     __self: this
   }, "Settings"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Form, {
     pt: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 824
+      lineNumber: 841
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Fieldset, {
@@ -111736,7 +111859,7 @@ var MainUI = function MainUI(_ref) {
     p: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 825
+      lineNumber: 842
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Legend, {
@@ -111744,7 +111867,7 @@ var MainUI = function MainUI(_ref) {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 826
+      lineNumber: 843
     },
     __self: this
   }, "Contrast Ratio"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
@@ -111752,14 +111875,14 @@ var MainUI = function MainUI(_ref) {
     py: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 829
+      lineNumber: 846
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 830
+      lineNumber: 847
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -111771,7 +111894,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 831
+      lineNumber: 848
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -111780,28 +111903,28 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 839
+      lineNumber: 856
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 840
+      lineNumber: 857
     },
     __self: this
   }, "3 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 841
+      lineNumber: 858
     },
     __self: this
   }, "AA large"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 844
+      lineNumber: 861
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -111813,7 +111936,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 845
+      lineNumber: 862
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -111822,28 +111945,28 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 853
+      lineNumber: 870
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 854
+      lineNumber: 871
     },
     __self: this
   }, "4.5 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 855
+      lineNumber: 872
     },
     __self: this
   }, "AA"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 858
+      lineNumber: 875
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -111855,7 +111978,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 859
+      lineNumber: 876
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -111864,27 +111987,27 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 867
+      lineNumber: 884
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 868
+      lineNumber: 885
     },
     __self: this
   }, "7:1 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 869
+      lineNumber: 886
     },
     __self: this
   }, "AAA")))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 875
+      lineNumber: 892
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ColorBlindFilter, {
@@ -111893,13 +112016,13 @@ var MainUI = function MainUI(_ref) {
     maxWidth: "24rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 876
+      lineNumber: 893
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 881
+      lineNumber: 898
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -111909,7 +112032,7 @@ var MainUI = function MainUI(_ref) {
     for: "border-width",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 882
+      lineNumber: 899
     },
     __self: this
   }, "Border width"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -111928,14 +112051,14 @@ var MainUI = function MainUI(_ref) {
     step: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 885
+      lineNumber: 902
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     mt: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 901
+      lineNumber: 918
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -111945,7 +112068,7 @@ var MainUI = function MainUI(_ref) {
     for: "box-padding",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 902
+      lineNumber: 919
     },
     __self: this
   }, "Box Padding"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -111964,7 +112087,7 @@ var MainUI = function MainUI(_ref) {
     step: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 905
+      lineNumber: 922
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111973,7 +112096,7 @@ var MainUI = function MainUI(_ref) {
     maxWidth: "24rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 922
+      lineNumber: 939
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Likes, {
@@ -111983,13 +112106,13 @@ var MainUI = function MainUI(_ref) {
     onClearLikes: handleClearLikes,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 923
+      lineNumber: 940
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SiteFooter, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 934
+      lineNumber: 951
     },
     __self: this
   })));
@@ -112020,7 +112143,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 949
+      lineNumber: 966
     },
     __self: this
   }) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(MainUI, {
@@ -112033,7 +112156,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 954
+      lineNumber: 971
     },
     __self: this
   });
@@ -112058,7 +112181,7 @@ var Index = function Index() {
       }
     })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/")
   
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/TextButton.js */ "./components/TextButton.js")["default"], __webpack_require__(/*! ./components/SiteFetch.js */ "./components/SiteFetch.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./elements/Input.js */ "./elements/Input.js")["default"], __webpack_require__(/*! ./elements/Label.js */ "./elements/Label.js")["default"], __webpack_require__(/*! ./elements/P.js */ "./elements/P.js")["default"], __webpack_require__(/*! ./elements/Button.js */ "./elements/Button.js")["default"], __webpack_require__(/*! ./components/Icon.js */ "./components/Icon.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"], __webpack_require__(/*! ./components/LoadingBars.js */ "./components/LoadingBars.js")["default"], __webpack_require__(/*! ./elements/Img.js */ "./elements/Img.js")["default"], __webpack_require__(/*! ./components/TextLink.js */ "./components/TextLink.js")["default"], __webpack_require__(/*! ./elements/Form.js */ "./elements/Form.js")["default"], __webpack_require__(/*! ./components/TextInput.js */ "./components/TextInput.js")["default"], __webpack_require__(/*! ./elements/Textarea.js */ "./elements/Textarea.js")["default"], __webpack_require__(/*! ./components/Palette.js */ "./components/Palette.js")["default"], __webpack_require__(/*! ./components/CombinationTools.js */ "./components/CombinationTools.js")["default"], __webpack_require__(/*! ./elements/Dl.js */ "./elements/Dl.js")["default"], __webpack_require__(/*! ./elements/Dt.js */ "./elements/Dt.js")["default"], __webpack_require__(/*! ./elements/Dd.js */ "./elements/Dd.js")["default"], __webpack_require__(/*! ./components/PaletteModal.js */ "./components/PaletteModal.js")["default"], __webpack_require__(/*! ./components/ColorPicker.js */ "./components/ColorPicker.js")["default"], __webpack_require__(/*! ./elements/H4.js */ "./elements/H4.js")["default"], __webpack_require__(/*! ./elements/Fieldset.js */ "./elements/Fieldset.js")["default"], __webpack_require__(/*! ./elements/Legend.js */ "./elements/Legend.js")["default"], __webpack_require__(/*! ./components/ColorBlindFilter.js */ "./components/ColorBlindFilter.js")["default"], __webpack_require__(/*! ./components/Likes.js */ "./components/Likes.js")["default"], __webpack_require__(/*! ./components/SiteFooter.js */ "./components/SiteFooter.js")["default"], __webpack_require__(/*! ./components/Combinations.js */ "./components/Combinations.js")["default"], __webpack_require__(/*! ./../node_modules/next/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/TextButton.js */ "./components/TextButton.js")["default"], __webpack_require__(/*! ./components/SiteFetch.js */ "./components/SiteFetch.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./elements/Input.js */ "./elements/Input.js")["default"], __webpack_require__(/*! ./elements/Label.js */ "./elements/Label.js")["default"], __webpack_require__(/*! ./elements/P.js */ "./elements/P.js")["default"], __webpack_require__(/*! ./elements/Button.js */ "./elements/Button.js")["default"], __webpack_require__(/*! ./components/Icon.js */ "./components/Icon.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"], __webpack_require__(/*! ./components/LoadingBars.js */ "./components/LoadingBars.js")["default"], __webpack_require__(/*! ./elements/Img.js */ "./elements/Img.js")["default"], __webpack_require__(/*! ./components/TextLink.js */ "./components/TextLink.js")["default"], __webpack_require__(/*! ./elements/Form.js */ "./elements/Form.js")["default"], __webpack_require__(/*! ./components/TextInput.js */ "./components/TextInput.js")["default"], __webpack_require__(/*! ./elements/Textarea.js */ "./elements/Textarea.js")["default"], __webpack_require__(/*! ./components/Palette.js */ "./components/Palette.js")["default"], __webpack_require__(/*! ./components/CombinationTools.js */ "./components/CombinationTools.js")["default"], __webpack_require__(/*! ./elements/Dl.js */ "./elements/Dl.js")["default"], __webpack_require__(/*! ./elements/Dt.js */ "./elements/Dt.js")["default"], __webpack_require__(/*! ./elements/Dd.js */ "./elements/Dd.js")["default"], __webpack_require__(/*! ./components/PaletteModal.js */ "./components/PaletteModal.js")["default"], __webpack_require__(/*! ./components/ColorPicker.js */ "./components/ColorPicker.js")["default"], __webpack_require__(/*! ./elements/H4.js */ "./elements/H4.js")["default"], __webpack_require__(/*! ./components/SlabStat.js */ "./components/SlabStat.js")["default"], __webpack_require__(/*! ./elements/Fieldset.js */ "./elements/Fieldset.js")["default"], __webpack_require__(/*! ./elements/Legend.js */ "./elements/Legend.js")["default"], __webpack_require__(/*! ./components/ColorBlindFilter.js */ "./components/ColorBlindFilter.js")["default"], __webpack_require__(/*! ./components/Likes.js */ "./components/Likes.js")["default"], __webpack_require__(/*! ./components/SiteFooter.js */ "./components/SiteFooter.js")["default"], __webpack_require__(/*! ./components/Combinations.js */ "./components/Combinations.js")["default"], __webpack_require__(/*! ./../node_modules/next/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
