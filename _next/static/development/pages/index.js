@@ -5398,11 +5398,11 @@ var _jsxFileName = "/Users/mrmrs/w/color/components/IconBlock.js";
 
 
 var IconBlock = function IconBlock(_ref) {
-  var currentCombination = _ref.currentCombination,
+  var boxPadding = _ref.boxPadding,
+      currentCombination = _ref.currentCombination,
       borderWidth = _ref.borderWidth;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-    py: [4, 5],
-    px: [3, 4],
+    p: boxPadding,
     bg: currentCombination.bg,
     display: "grid",
     style: {
@@ -5424,7 +5424,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "remove",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 19
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5433,7 +5433,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "caretDown",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 20
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5442,7 +5442,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "caretRight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 21
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5451,7 +5451,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "caretLeft",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5460,7 +5460,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "caretUp",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 23
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5469,7 +5469,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "pop",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5478,7 +5478,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "cost",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 25
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5487,7 +5487,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "creditCard",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 26
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5496,7 +5496,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "upload",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 27
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5505,7 +5505,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "exclamationOutline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 28
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5514,7 +5514,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "exclamation",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 29
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5523,7 +5523,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "collapse",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 30
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5532,7 +5532,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "expand",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5541,7 +5541,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "file",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 32
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5550,7 +5550,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "forward",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 33
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5559,7 +5559,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 34
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5568,7 +5568,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 35
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5577,7 +5577,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "down",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 36
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5586,7 +5586,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "gear",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5595,7 +5595,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "generalInfo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 38
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5604,7 +5604,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "hamburger",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 39
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5613,7 +5613,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "info",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 40
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5622,7 +5622,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "help",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 41
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5631,7 +5631,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "list",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 42
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5640,7 +5640,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "mail",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 43
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5649,7 +5649,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "refresh",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 44
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5658,7 +5658,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "reorder",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 45
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5667,7 +5667,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "resizeHorizontal",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 46
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5676,7 +5676,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "minus",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 47
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5685,7 +5685,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "plus",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 48
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5694,7 +5694,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "okSign",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 49
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5703,7 +5703,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "activation",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 50
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5712,7 +5712,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "validator",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 51
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5721,7 +5721,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "safeOutline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 52
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5730,7 +5730,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "safe",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 53
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5739,7 +5739,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "warningOutline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 54
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5748,7 +5748,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "warning",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 55
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5757,7 +5757,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "stopOutline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 56
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5766,7 +5766,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "stop",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 57
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5775,7 +5775,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "lock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 58
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5784,7 +5784,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "time",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 59
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5793,7 +5793,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "quotes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 60
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5802,7 +5802,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 61
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5811,7 +5811,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "facebook",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 62
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5820,7 +5820,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "google",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 63
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5829,7 +5829,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "linkedin",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 64
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5838,7 +5838,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "download",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 65
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5847,7 +5847,7 @@ var IconBlock = function IconBlock(_ref) {
     type: "wrench",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 66
     },
     __self: this
   }));
@@ -5882,7 +5882,6 @@ var IconSolid =
 Object(react_emotion__WEBPACK_IMPORTED_MODULE_1__["default"])("div", {
   target: "e4p84oy0"
 })(styled_system__WEBPACK_IMPORTED_MODULE_3__["space"], styled_system__WEBPACK_IMPORTED_MODULE_3__["width"], styled_system__WEBPACK_IMPORTED_MODULE_3__["height"], styled_system__WEBPACK_IMPORTED_MODULE_3__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_3__["position"], styled_system__WEBPACK_IMPORTED_MODULE_3__["display"], styled_system__WEBPACK_IMPORTED_MODULE_3__["flex"], styled_system__WEBPACK_IMPORTED_MODULE_3__["flexWrap"], styled_system__WEBPACK_IMPORTED_MODULE_3__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_3__["justifyContent"], styled_system__WEBPACK_IMPORTED_MODULE_3__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_3__["textAlign"], styled_system__WEBPACK_IMPORTED_MODULE_3__["color"], styled_system__WEBPACK_IMPORTED_MODULE_3__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_3__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_3__["borderRadius"], {
-  boxSizing: "border-box",
   transition: "all .25s ease-in"
 });
 IconSolid.defaultProps = {
@@ -5898,7 +5897,6 @@ var IconOutline =
 Object(react_emotion__WEBPACK_IMPORTED_MODULE_1__["default"])("div", {
   target: "e4p84oy1"
 })(styled_system__WEBPACK_IMPORTED_MODULE_3__["space"], styled_system__WEBPACK_IMPORTED_MODULE_3__["width"], styled_system__WEBPACK_IMPORTED_MODULE_3__["height"], styled_system__WEBPACK_IMPORTED_MODULE_3__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_3__["position"], styled_system__WEBPACK_IMPORTED_MODULE_3__["display"], styled_system__WEBPACK_IMPORTED_MODULE_3__["flex"], styled_system__WEBPACK_IMPORTED_MODULE_3__["flexWrap"], styled_system__WEBPACK_IMPORTED_MODULE_3__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_3__["justifyContent"], styled_system__WEBPACK_IMPORTED_MODULE_3__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_3__["textAlign"], styled_system__WEBPACK_IMPORTED_MODULE_3__["color"], styled_system__WEBPACK_IMPORTED_MODULE_3__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_3__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_3__["borderRadius"], {
-  boxSizing: "border-box",
   transition: "all .25s ease-in"
 });
 IconOutline.defaultProps = {
@@ -5912,17 +5910,16 @@ IconOutline.defaultProps = {
 };
 
 var IconOutlineBlock = function IconOutlineBlock(_ref) {
-  var currentCombination = _ref.currentCombination,
+  var boxPadding = _ref.boxPadding,
+      currentCombination = _ref.currentCombination,
       borderWidth = _ref.borderWidth;
   var colorParentBgContrastValue = Object(_utils_getContrastScore__WEBPACK_IMPORTED_MODULE_2__["default"])(currentCombination.color, currentCombination.parentBg);
   var iconOutlineColor = colorParentBgContrastValue < 4.5 ? currentCombination.bg : currentCombination.color;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-    mt: 5,
-    mb: 5,
-    px: 4,
+    p: boxPadding,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 98
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
@@ -5935,7 +5932,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 99
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5944,7 +5941,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 108
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5953,7 +5950,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "remove",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 113
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5962,7 +5959,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 115
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5971,7 +5968,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "caretDown",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 120
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5980,7 +5977,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 122
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -5989,7 +5986,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "caretRight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 127
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -5998,7 +5995,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 129
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6007,7 +6004,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "caretLeft",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 134
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6016,7 +6013,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 136
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6025,7 +6022,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "caretUp",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 141
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6034,7 +6031,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 143
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6043,7 +6040,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "pop",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 148
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6052,7 +6049,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 150
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6061,7 +6058,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "cost",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 155
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6070,7 +6067,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 157
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6079,7 +6076,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "creditCard",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
+      lineNumber: 162
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6088,7 +6085,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 164
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6097,7 +6094,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "upload",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 169
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6106,7 +6103,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 171
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6115,7 +6112,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "exclamationOutline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 176
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6124,7 +6121,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180
+      lineNumber: 178
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6133,7 +6130,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "exclamation",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 183
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6142,7 +6139,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 185
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6151,7 +6148,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "collapse",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 190
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6160,7 +6157,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 192
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6169,7 +6166,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "expand",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
+      lineNumber: 197
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6178,7 +6175,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201
+      lineNumber: 199
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6187,7 +6184,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "file",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 204
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6196,7 +6193,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 206
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6205,7 +6202,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "forward",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213
+      lineNumber: 211
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6214,7 +6211,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 213
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6223,7 +6220,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 218
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6232,7 +6229,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 220
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6241,7 +6238,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 225
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6250,7 +6247,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229
+      lineNumber: 227
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6259,7 +6256,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "down",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234
+      lineNumber: 232
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6268,7 +6265,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236
+      lineNumber: 234
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6277,7 +6274,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "gear",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
+      lineNumber: 239
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6286,7 +6283,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
+      lineNumber: 241
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6295,7 +6292,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "generalInfo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248
+      lineNumber: 246
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6304,7 +6301,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250
+      lineNumber: 248
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6313,7 +6310,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "hamburger",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255
+      lineNumber: 253
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6322,7 +6319,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257
+      lineNumber: 255
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6331,7 +6328,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "info",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262
+      lineNumber: 260
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6340,7 +6337,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264
+      lineNumber: 262
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6349,7 +6346,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "help",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269
+      lineNumber: 267
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconSolid, {
@@ -6358,7 +6355,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     border: "".concat(borderWidth, "px solid"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 271
+      lineNumber: 269
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6367,14 +6364,15 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "list",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276
+      lineNumber: 274
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278
+      lineNumber: 276
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6387,6 +6385,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
@@ -6399,14 +6398,15 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "refresh",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 282
+      lineNumber: 284
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284
+      lineNumber: 286
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6415,14 +6415,15 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "reorder",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 285
+      lineNumber: 289
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287
+      lineNumber: 291
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6431,42 +6432,11 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "resizeHorizontal",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 290
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
-    size: 16,
-    color: iconOutlineColor,
-    type: "minus",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 291
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 293
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
-    size: 16,
-    color: iconOutlineColor,
-    type: "plus",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 294
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
@@ -6476,77 +6446,48 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
     size: 16,
     color: iconOutlineColor,
-    type: "okSign",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 297
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
+    type: "minus",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 299
     },
     __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 301
+    },
+    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
     size: 16,
     color: iconOutlineColor,
-    type: "activation",
+    type: "plus",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300
+      lineNumber: 304
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 302
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
-    size: 16,
-    color: iconOutlineColor,
-    type: "validator",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 303
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 305
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
-    size: 16,
-    color: iconOutlineColor,
-    type: "safeOutline",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 306
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 308
-    },
-    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
     size: 16,
     color: iconOutlineColor,
-    type: "safe",
+    type: "okSign",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 309
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
@@ -6556,77 +6497,48 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
     size: 16,
     color: iconOutlineColor,
-    type: "warningOutline",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 312
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
+    type: "activation",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 314
     },
     __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 316
+    },
+    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
     size: 16,
     color: iconOutlineColor,
-    type: "warning",
+    type: "validator",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315
+      lineNumber: 319
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 317
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
-    size: 16,
-    color: iconOutlineColor,
-    type: "stopOutline",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 318
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 320
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
-    size: 16,
-    color: iconOutlineColor,
-    type: "stop",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 321
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 323
-    },
-    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
     size: 16,
     color: iconOutlineColor,
-    type: "lock",
+    type: "safeOutline",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 324
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
@@ -6636,77 +6548,48 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
     size: 16,
     color: iconOutlineColor,
-    type: "time",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 327
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
+    type: "safe",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 329
     },
     __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 331
+    },
+    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
     size: 16,
     color: iconOutlineColor,
-    type: "quotes",
+    type: "warningOutline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 330
+      lineNumber: 334
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 332
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
-    size: 16,
-    color: iconOutlineColor,
-    type: "signup",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 333
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 335
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
-    size: 16,
-    color: iconOutlineColor,
-    type: "facebook",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 336
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 338
-    },
-    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
     size: 16,
     color: iconOutlineColor,
-    type: "google",
+    type: "warning",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 339
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
@@ -6716,17 +6599,154 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
     size: 16,
     color: iconOutlineColor,
-    type: "linkedin",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 342
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
-    color: iconOutlineColor,
+    type: "stopOutline",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 344
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 346
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
+    size: 16,
+    color: iconOutlineColor,
+    type: "stop",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 349
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 351
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
+    size: 16,
+    color: iconOutlineColor,
+    type: "lock",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 354
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 356
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
+    size: 16,
+    color: iconOutlineColor,
+    type: "time",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 359
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 361
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
+    size: 16,
+    color: iconOutlineColor,
+    type: "quotes",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 364
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 366
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
+    size: 16,
+    color: iconOutlineColor,
+    type: "signup",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 369
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 371
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
+    size: 16,
+    color: iconOutlineColor,
+    type: "facebook",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 374
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 376
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
+    size: 16,
+    color: iconOutlineColor,
+    type: "google",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 379
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 381
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
+    size: 16,
+    color: iconOutlineColor,
+    type: "linkedin",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 384
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
+    color: iconOutlineColor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 386
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6735,14 +6755,15 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "download",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 345
+      lineNumber: 389
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconOutline, {
+    border: "".concat(borderWidth + 2, "px solid"),
     color: iconOutlineColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 347
+      lineNumber: 391
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -6751,7 +6772,7 @@ var IconOutlineBlock = function IconOutlineBlock(_ref) {
     type: "wrench",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 348
+      lineNumber: 394
     },
     __self: this
   }))));

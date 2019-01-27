@@ -12956,7 +12956,7 @@ function (_App) {
           lineNumber: 53
         },
         __self: this
-      }, "Colors - Cloudflare.design")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(emotion_theming__WEBPACK_IMPORTED_MODULE_7__["ThemeProvider"], {
+      }, "Color - Cloudflare Design")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(emotion_theming__WEBPACK_IMPORTED_MODULE_7__["ThemeProvider"], {
         theme: _theme__WEBPACK_IMPORTED_MODULE_10__["default"],
         __source: {
           fileName: _jsxFileName,
