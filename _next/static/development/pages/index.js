@@ -9440,7 +9440,7 @@ var TextBlock = function TextBlock(_ref) {
       lineNumber: 36
     },
     __self: this
-  }, "necessary to recognize that color deceives continually.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+  }, "necessary to recognize that color deceives continually. ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
@@ -111382,6 +111382,7 @@ var MainUI = function MainUI(_ref) {
     __self: this
   }, "Unsplash photo")))), imageLoading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     width: 1,
+    justifyContent: "center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 528
