@@ -8962,6 +8962,7 @@ var SiteFetch = function SiteFetch(_ref) {
     },
     borderRadius: 2,
     mb: 0,
+    bg: "gray.8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
@@ -8972,9 +8973,10 @@ var SiteFetch = function SiteFetch(_ref) {
     fontWeight: 700,
     py: 3,
     px: 3,
+    width: 1,
     type: "url",
-    border: "none",
-    bg: "#eeeeee",
+    border: "0 solid transparent",
+    bg: "gray.8",
     borderRadius: 0,
     value: url,
     onChange: handleChange,
@@ -8983,7 +8985,7 @@ var SiteFetch = function SiteFetch(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
@@ -9001,27 +9003,27 @@ var SiteFetch = function SiteFetch(_ref) {
     disabled: isLoading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 72
     },
     __self: this
   }, "Go")), isLoading && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
     width: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 88
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_LoadingBars__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 89
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(P, {
     ml: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 90
     },
     __self: this
   }, "Fetching Palette")));
