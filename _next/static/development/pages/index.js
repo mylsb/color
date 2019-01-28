@@ -297,6 +297,55 @@ ButtonIcon.defaultProps = {
 
 /***/ }),
 
+/***/ "./components/ButtonOutline.js":
+/*!*************************************!*\
+  !*** ./components/ButtonOutline.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(Button) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/mrmrs/w/color/components/ButtonOutline.js";
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+ // This file can be copied to start new components
+// You'll want to replace ButtonOutline with the component name which should
+// also be the name of the file
+
+var ButtonOutline = function ButtonOutline(_ref) {
+  var props = _extends({}, _ref);
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, _extends({}, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }), props.children);
+};
+
+ButtonOutline.defaultProps = {
+  color: "blue.4",
+  bg: "white",
+  borderColor: "blue.4",
+  borderRadius: 2,
+  px: 3,
+  py: 2,
+  fontSize: 2,
+  fontWeight: 600,
+  lineHeight: 1,
+  mt: "-1px",
+  mb: "-1px"
+};
+/* harmony default export */ __webpack_exports__["default"] = (ButtonOutline);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Button.js */ "./elements/Button.js")["default"]))
+
+/***/ }),
+
 /***/ "./components/ButtonPrimary.js":
 /*!*************************************!*\
   !*** ./components/ButtonPrimary.js ***!
@@ -2893,7 +2942,7 @@ var Colorbox = function Colorbox(_ref2) {
     width: 1,
     name: "satCurve",
     "aria-label": "saturation curve",
-    value: form.hueCurve,
+    value: form.satCurve,
     onChange: handleInput,
     __source: {
       fileName: _jsxFileName,
@@ -3318,32 +3367,74 @@ var CombinationTools = function CombinationTools(_ref2) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Div, Flex, ButtonIcon, H4, MiniTextBlock) {/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emotion */ "./node_modules/emotion/dist/index.esm.js");
+/* WEBPACK VAR INJECTION */(function(Div, Flex, ButtonIcon, H4, MiniTextBlock, Button) {/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emotion */ "./node_modules/emotion/dist/index.esm.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_chunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/chunk */ "./node_modules/lodash/chunk.js");
+/* harmony import */ var lodash_chunk__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_chunk__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
 var _jsxFileName = "/Users/mrmrs/w/color/components/Combinations.js";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
 
 var Combinations = function Combinations(_ref) {
   var availableCombos = _ref.availableCombos,
       onHideCombinations = _ref.onHideCombinations;
+  var pagedCombinations = lodash_chunk__WEBPACK_IMPORTED_MODULE_2___default()(availableCombos, 100);
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      viewableArrayCount = _useState2[0],
+      setViewableArrayCount = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(pagedCombinations[0]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      inViewCombinations = _useState4[0],
+      setInViewCombinations = _useState4[1];
+
+  var combinationsLeftToView = viewableArrayCount < pagedCombinations.length - 1;
+
+  var handleLoadMore = function handleLoadMore() {
+    var newCount = viewableArrayCount + 1;
+    setViewableArrayCount(newCount);
+    setInViewCombinations(function (prev) {
+      return _toConsumableArray(prev).concat(_toConsumableArray(pagedCombinations[newCount]));
+    });
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
     position: "relative",
     display: "block",
     bg: "white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
     py: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ButtonIcon, {
@@ -3355,7 +3446,7 @@ var Combinations = function Combinations(_ref) {
     Object(emotion__WEBPACK_IMPORTED_MODULE_0__["css"])("backface-visibility:hidden;"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 22
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(H4, {
@@ -3365,7 +3456,7 @@ var Combinations = function Combinations(_ref) {
     textAlign: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 30
     },
     __self: this
   }, availableCombos.length, " Accessible Combinations"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ButtonIcon, {
@@ -3377,7 +3468,7 @@ var Combinations = function Combinations(_ref) {
     Object(emotion__WEBPACK_IMPORTED_MODULE_0__["css"])("backface-visibility:hidden;"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 33
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Flex, {
@@ -3385,10 +3476,10 @@ var Combinations = function Combinations(_ref) {
     flexWrap: "wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 42
     },
     __self: this
-  }, availableCombos.map(function (combo, i) {
+  }, inViewCombinations.map(function (combo, i) {
     var currentCombination = {
       bg: combo[0],
       color: combo[1],
@@ -3402,7 +3493,7 @@ var Combinations = function Combinations(_ref) {
       Object(emotion__WEBPACK_IMPORTED_MODULE_0__["css"])("position:relative;"),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 50
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MiniTextBlock, {
@@ -3410,15 +3501,30 @@ var Combinations = function Combinations(_ref) {
       currentCombination: currentCombination,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 57
       },
       __self: this
     }));
-  })));
+  }), combinationsLeftToView && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
+    width: [1, 1 / 2, 1 / 4],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
+    type: "button",
+    onClick: handleLoadMore,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }, "Load more..."))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Combinations);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./components/ButtonIcon.js */ "./components/ButtonIcon.js")["default"], __webpack_require__(/*! ./elements/H4.js */ "./elements/H4.js")["default"], __webpack_require__(/*! ./components/MiniTextBlock.js */ "./components/MiniTextBlock.js")["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./components/ButtonIcon.js */ "./components/ButtonIcon.js")["default"], __webpack_require__(/*! ./elements/H4.js */ "./elements/H4.js")["default"], __webpack_require__(/*! ./components/MiniTextBlock.js */ "./components/MiniTextBlock.js")["default"], __webpack_require__(/*! ./elements/Button.js */ "./elements/Button.js")["default"]))
 
 /***/ }),
 
@@ -3798,7 +3904,7 @@ var FormBlock = function FormBlock(_ref) {
     bg: "transparent",
     color: "inherit",
     borderColor: "currentColor",
-    value: "Example first name",
+    defaultValue: "Example first name",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62
@@ -3828,7 +3934,7 @@ var FormBlock = function FormBlock(_ref) {
     bg: "transparent",
     color: "inherit",
     borderColor: "currentColor",
-    value: "Example last name",
+    defaultValue: "Example last name",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 66
@@ -3962,7 +4068,7 @@ var FormBlock = function FormBlock(_ref) {
     color: currentCombination.color,
     border: "0",
     fontSize: 3,
-    value: "6234 Spadina Avenue",
+    defaultValue: "6234 Spadina Avenue",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 120
@@ -4006,7 +4112,7 @@ var FormBlock = function FormBlock(_ref) {
     color: currentCombination.color,
     border: "0",
     fontSize: 3,
-    value: "Suite 4201",
+    defaultValue: "Suite 4201",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 127
@@ -9011,7 +9117,7 @@ var SiteFooter = function SiteFooter(_ref) {
           lineNumber: 31
         },
         __self: this
-      }, "We're growing our teams in San Francisco, London, and Austin! If you're interested in joining us, checkout ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
+      }, "We're growing our teams in San Francisco, London, and Austin! We welcome applications from everyone and especially encourage underrepresented minorities to apply. If you're interested in joining us, checkout ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
         fontWeight: 600,
         href: "https://www.cloudflare.com/careers/departments/design/",
         __source: {
@@ -9191,7 +9297,7 @@ var SlabStat = function SlabStat(_ref) {
 
 SlabStat.propTypes = {
   term: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-  description: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+  description: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number])
 };
 SlabStat.defaultProps = {
   term: "This is a label",
@@ -9274,45 +9380,6 @@ TableHeaderCell.defaultProps = {
 
 /***/ }),
 
-/***/ "./components/Text.js":
-/*!****************************!*\
-  !*** ./components/Text.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-emotion */ "./node_modules/react-emotion/dist/index.esm.js");
-/* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
-
-
-var textShadow = Object(styled_system__WEBPACK_IMPORTED_MODULE_1__["style"])({
-  prop: "textShadow",
-  cssTextroperty: "textShadow",
-  key: "textShadow",
-  scale: ["1px 1px 2px pink ", "#f30 1px 0 10px", "red 2px 5px"]
-});
-var Text =
-/*#__PURE__*/
-Object(react_emotion__WEBPACK_IMPORTED_MODULE_0__["default"])("p", {
-  target: "eb2ugqd0"
-})(styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["display"], styled_system__WEBPACK_IMPORTED_MODULE_1__["maxWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontWeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["textAlign"], textShadow, styled_system__WEBPACK_IMPORTED_MODULE_1__["lineHeight"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borders"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderColor"], styled_system__WEBPACK_IMPORTED_MODULE_1__["borderRadius"], {
-  boxSizing: "border-box",
-  transition: "all .1s ease-in"
-});
-Text.defaultTextrops = {
-  fontWeight: 400,
-  lineHeight: 1.5,
-  fontSize: 3,
-  maxWidth: "34em",
-  display: "block",
-  mb: 5
-};
-/* harmony default export */ __webpack_exports__["default"] = (Text);
-
-/***/ }),
-
 /***/ "./components/TextBlock.js":
 /*!*********************************!*\
   !*** ./components/TextBlock.js ***!
@@ -9322,7 +9389,7 @@ Text.defaultTextrops = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Div, Text, Span, H1, Time, Code, P, Footer) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(Div, Span, H1, Time, Code, P, Footer) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! color */ "./node_modules/color/index.js");
 /* harmony import */ var color__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(color__WEBPACK_IMPORTED_MODULE_1__);
@@ -9356,14 +9423,14 @@ var TextBlock = function TextBlock(_ref) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 16
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
     my: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 25
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -9371,7 +9438,7 @@ var TextBlock = function TextBlock(_ref) {
     fontWeight: 600,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 26
     },
     __self: this
   }, "Contrast"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -9381,7 +9448,7 @@ var TextBlock = function TextBlock(_ref) {
     mb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 29
     },
     __self: this
   }, contrast), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H1, {
@@ -9393,7 +9460,7 @@ var TextBlock = function TextBlock(_ref) {
     pb: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 32
     },
     __self: this
   }, "A Sample Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Time, {
@@ -9401,13 +9468,13 @@ var TextBlock = function TextBlock(_ref) {
     fontSize: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 43
     },
     __self: this
   }, "22 January 2012")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
@@ -9418,32 +9485,32 @@ var TextBlock = function TextBlock(_ref) {
     mb: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 45
     },
     __self: this
   }, "Every perception of color is an illusion.. ..we do not see colors as they really are. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 47
     },
     __self: this
   }, "In our perception they alter one another."), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
-    display: ['none', 'inline'],
+    display: ["none", "inline"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 48
     },
     __self: this
-  }, "In order to use color effectively it is ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, "In order to use color effectively it is", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 50
     },
     __self: this
   }, "necessary to recognize that color deceives continually. ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 52
     },
     __self: this
   }, "In visual perception a color is almost never seen as it really is \u2014 as it physically is. This fact makes color the most relative medium in art."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Code, {
@@ -9453,49 +9520,49 @@ var TextBlock = function TextBlock(_ref) {
     mt: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 59
     },
     __self: this
   }, "// This is a code comment", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 61
     },
     __self: this
   }), "/* Another type of code comment */", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 63
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 64
     },
     __self: this
   }), "<article>", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 66
     },
     __self: this
   }), "\xA0\xA0<h1>A title example</h1>", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 68
     },
     __self: this
   }), "\xA0\xA0<h2>A subtitle example</h2>", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 70
     },
     __self: this
   }), "\xA0\xA0<p>And this would be some paragraph text.</p>", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 72
     },
     __self: this
   }), "</article>"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_elements_Blockquote__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -9505,7 +9572,7 @@ var TextBlock = function TextBlock(_ref) {
     mt: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 75
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(P, {
@@ -9514,27 +9581,27 @@ var TextBlock = function TextBlock(_ref) {
     fontWeight: 600,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 76
     },
     __self: this
   }, "Color is my day-long obsession, joy and torment."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Footer, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 79
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 80
     },
     __self: this
   }, "Claude Monet"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TextBlock);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Text.js */ "./components/Text.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"], __webpack_require__(/*! ./elements/H1.js */ "./elements/H1.js")["default"], __webpack_require__(/*! ./elements/Time.js */ "./elements/Time.js")["default"], __webpack_require__(/*! ./elements/Code.js */ "./elements/Code.js")["default"], __webpack_require__(/*! ./elements/P.js */ "./elements/P.js")["default"], __webpack_require__(/*! ./elements/Footer.js */ "./elements/Footer.js")["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"], __webpack_require__(/*! ./elements/H1.js */ "./elements/H1.js")["default"], __webpack_require__(/*! ./elements/Time.js */ "./elements/Time.js")["default"], __webpack_require__(/*! ./elements/Code.js */ "./elements/Code.js")["default"], __webpack_require__(/*! ./elements/P.js */ "./elements/P.js")["default"], __webpack_require__(/*! ./elements/Footer.js */ "./elements/Footer.js")["default"]))
 
 /***/ }),
 
@@ -110474,7 +110541,7 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Div, TextButton, SiteFetch, Flex, Input, Label, P, Button, Icon, Span, LoadingBars, Img, TextLink, Form, TextInput, Textarea, Palette, CombinationTools, Dl, Dt, Dd, PaletteModal, ColorPicker, H4, SlabStat, Fieldset, Legend, ColorBlindFilter, Likes, SiteFooter, Combinations, module) {/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emotion */ "./node_modules/emotion/dist/index.esm.js");
+/* WEBPACK VAR INJECTION */(function(Div, TextButton, SiteFetch, Flex, Input, Label, P, Button, Icon, Span, LoadingBars, Img, TextLink, Form, TextInput, Textarea, ButtonOutline, Palette, CombinationTools, Dl, Dt, Dd, PaletteModal, ColorPicker, H4, SlabStat, Fieldset, Legend, ColorBlindFilter, Likes, SiteFooter, Combinations, module) {/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emotion */ "./node_modules/emotion/dist/index.esm.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -110502,17 +110569,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_findKey__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(lodash_findKey__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../theme */ "./theme.js");
-/* harmony import */ var _utils_defaultPalette__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../utils/defaultPalette */ "./utils/defaultPalette.js");
-/* harmony import */ var _utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../utils/generateRandomPalette */ "./utils/generateRandomPalette.js");
-/* harmony import */ var _utils_sortPalette__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../utils/sortPalette */ "./utils/sortPalette.js");
-/* harmony import */ var _utils_getAllCombos__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../utils/getAllCombos */ "./utils/getAllCombos.js");
-/* harmony import */ var _utils_getContrastScore__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../utils/getContrastScore */ "./utils/getContrastScore.js");
-/* harmony import */ var _components_Preview__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../components/Preview */ "./components/Preview.js");
-/* harmony import */ var _components_PlayerControls__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../components/PlayerControls */ "./components/PlayerControls.js");
-/* harmony import */ var _components_Colorbox__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../components/Colorbox */ "./components/Colorbox.js");
-/* harmony import */ var _components_ColorTable__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../components/ColorTable */ "./components/ColorTable.js");
-/* harmony import */ var _utils_isHex__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../utils/isHex */ "./utils/isHex.js");
+/* harmony import */ var _utils_defaultPalette__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../utils/defaultPalette */ "./utils/defaultPalette.js");
+/* harmony import */ var _utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../utils/generateRandomPalette */ "./utils/generateRandomPalette.js");
+/* harmony import */ var _utils_sortPalette__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../utils/sortPalette */ "./utils/sortPalette.js");
+/* harmony import */ var _utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../utils/getAllCombos */ "./utils/getAllCombos.js");
+/* harmony import */ var _utils_getContrastScore__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../utils/getContrastScore */ "./utils/getContrastScore.js");
+/* harmony import */ var _components_Preview__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../components/Preview */ "./components/Preview.js");
+/* harmony import */ var _components_PlayerControls__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../components/PlayerControls */ "./components/PlayerControls.js");
+/* harmony import */ var _components_Colorbox__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../components/Colorbox */ "./components/Colorbox.js");
+/* harmony import */ var _components_ColorTable__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../components/ColorTable */ "./components/ColorTable.js");
+/* harmony import */ var _utils_isHex__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../utils/isHex */ "./utils/isHex.js");
 
 
 
@@ -110569,7 +110635,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
 var resetPinned = {
   color: false,
   bg: false,
@@ -110577,13 +110642,11 @@ var resetPinned = {
   parentBg: false
 };
 var debouncedUpdateCombos = lodash_debounce__WEBPACK_IMPORTED_MODULE_15___default()(function (updatedPalette, contrastRatio, setAvailableCombos) {
-  var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_20__["default"])(updatedPalette, contrastRatio);
+  var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(updatedPalette, contrastRatio);
   setAvailableCombos(availableCombos);
 }, 500);
 
 var MainUI = function MainUI(_ref) {
-  var _React$createElement;
-
   var palette = _ref.palette,
       setPalette = _ref.setPalette,
       availableCombos = _ref.availableCombos,
@@ -110689,7 +110752,7 @@ var MainUI = function MainUI(_ref) {
     duration: 3000,
     startImmediate: true,
     callback: function callback() {
-      var newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_18__["default"])(palette, pinnedColors, currentCombination, availableCombos);
+      var newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_17__["default"])(palette, pinnedColors, currentCombination, availableCombos);
       set(newCombo);
     }
   }),
@@ -110701,7 +110764,7 @@ var MainUI = function MainUI(_ref) {
     Object(idb_keyval__WEBPACK_IMPORTED_MODULE_3__["get"])("likes").then(function (likes) {
       likes && updateLikes(likes);
     });
-    var starterCombination = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_18__["default"])(palette, pinnedColors, currentCombination, availableCombos);
+    var starterCombination = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_17__["default"])(palette, pinnedColors, currentCombination, availableCombos);
     set(starterCombination);
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
@@ -110813,7 +110876,7 @@ var MainUI = function MainUI(_ref) {
     }
 
     isRunning && stop();
-    var newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_18__["default"])(palette, pinnedColors, currentCombination, availableCombos);
+    var newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_17__["default"])(palette, pinnedColors, currentCombination, availableCombos);
     set(newCombo);
   };
 
@@ -110838,6 +110901,8 @@ var MainUI = function MainUI(_ref) {
       color: null,
       index: null
     });
+    var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(alteredPalette, contrastRatio);
+    setAvailableCombos(availableCombos);
   };
 
   var handleAddColor = function handleAddColor() {
@@ -110885,9 +110950,9 @@ var MainUI = function MainUI(_ref) {
             case 0:
               setPalette(palette);
               setPinnedColors(resetPinned);
-              availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_20__["default"])(palette, contrastRatio);
+              availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(palette, contrastRatio);
               setAvailableCombos(availableCombos);
-              newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_18__["default"])(palette, resetPinned, null, availableCombos);
+              newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_17__["default"])(palette, resetPinned, null, availableCombos);
               set(newCombo);
 
             case 6:
@@ -110906,9 +110971,9 @@ var MainUI = function MainUI(_ref) {
   var handleClearPalette = function handleClearPalette() {
     var clearedPalette = ["#000000", "#FFFFFF", "#2c7cb0", "#757575"];
     setPalette(clearedPalette);
-    var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_20__["default"])(clearedPalette, contrastRatio);
+    var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(clearedPalette, contrastRatio);
     setAvailableCombos(availableCombos);
-    var newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_18__["default"])(clearedPalette, resetPinned, null, availableCombos);
+    var newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_17__["default"])(clearedPalette, resetPinned, null, availableCombos);
     set(newCombo);
     setImageName(new Date());
     setPaletteImage("");
@@ -110928,39 +110993,40 @@ var MainUI = function MainUI(_ref) {
     var _ref7 = _asyncToGenerator(
     /*#__PURE__*/
     _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5(e) {
-      var res, palette, availableCombos, newCombo;
+      var imageFile, res, palette, availableCombos, newCombo;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
         while (1) {
           switch (_context5.prev = _context5.next) {
             case 0:
               setImageLoading(true);
+              imageFile = e.target.files[0];
               setPaletteImage({
-                url: URL.createObjectURL(e.target.files[0]),
+                url: URL.createObjectURL(imageFile),
                 name: null,
                 username: null
               });
-              _context5.next = 4;
+              _context5.next = 5;
               return fetch("https://image-palette.now.sh", {
                 method: "POST",
-                body: e.target.files[0]
+                body: imageFile
               });
 
-            case 4:
+            case 5:
               res = _context5.sent;
-              _context5.next = 7;
+              _context5.next = 8;
               return res.json();
 
-            case 7:
+            case 8:
               palette = _context5.sent;
               setImageLoading(false);
               setPalette(palette);
               setPinnedColors(resetPinned);
-              availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_20__["default"])(palette, contrastRatio);
+              availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(palette, contrastRatio);
               setAvailableCombos(availableCombos);
-              newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_18__["default"])(palette, resetPinned, null, availableCombos);
+              newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_17__["default"])(palette, resetPinned, null, availableCombos);
               set(newCombo);
 
-            case 15:
+            case 16:
             case "end":
               return _context5.stop();
           }
@@ -111011,9 +111077,9 @@ var MainUI = function MainUI(_ref) {
               setImageLoading(false);
               setPalette(colors);
               setPinnedColors(resetPinned);
-              availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_20__["default"])(colors, contrastRatio);
+              availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(colors, contrastRatio);
               setAvailableCombos(availableCombos);
-              newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_18__["default"])(palette, resetPinned, null, availableCombos);
+              newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_17__["default"])(palette, resetPinned, null, availableCombos);
               set(newCombo);
               setPaletteImage({
                 url: url,
@@ -111045,9 +111111,9 @@ var MainUI = function MainUI(_ref) {
     }, []);
     setPalette(newPalette);
     setPinnedColors(resetPinned);
-    var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_20__["default"])(newPalette, contrastRatio);
+    var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(newPalette, contrastRatio);
     setAvailableCombos(availableCombos);
-    var newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_18__["default"])(newPalette, resetPinned, null, availableCombos);
+    var newCombo = Object(_utils_generateRandomPalette__WEBPACK_IMPORTED_MODULE_17__["default"])(newPalette, resetPinned, null, availableCombos);
     set(newCombo);
   };
 
@@ -111089,7 +111155,7 @@ var MainUI = function MainUI(_ref) {
   var handleContrastRatioChange = function handleContrastRatioChange(e) {
     var newContrastRatio = lodash_toNumber__WEBPACK_IMPORTED_MODULE_12___default()(e.target.value);
     setContrastRatio(newContrastRatio);
-    var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_20__["default"])(palette, newContrastRatio);
+    var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(palette, newContrastRatio);
     setAvailableCombos(availableCombos);
   };
 
@@ -111111,28 +111177,36 @@ var MainUI = function MainUI(_ref) {
     });
   };
 
-  var colorParentBgContrastValue = Object(_utils_getContrastScore__WEBPACK_IMPORTED_MODULE_21__["default"])(currentCombination.color, currentCombination.parentBg);
+  var colorParentBgContrastValue = Object(_utils_getContrastScore__WEBPACK_IMPORTED_MODULE_20__["default"])(currentCombination.color, currentCombination.parentBg);
   var controlColor = colorParentBgContrastValue < 4.5 ? currentCombination.bg : currentCombination.color;
 
-  var handleColorBoxAdd = function handleColorBoxAdd(newPalette) {
-    setPalette(function (prev) {
-      return _toConsumableArray(prev).concat(_toConsumableArray(newPalette));
-    });
+  var handleColorBoxAdd = function handleColorBoxAdd(newColors) {
+    var newPalette = _toConsumableArray(palette).concat(_toConsumableArray(newColors));
+
+    setPalette(newPalette);
+    var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(newPalette, contrastRatio);
+    setAvailableCombos(availableCombos);
   };
 
   var handleColorBoxReplace = function handleColorBoxReplace(newPalette) {
     setPalette(newPalette);
+    var availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(newPalette, contrastRatio);
+    setAvailableCombos(availableCombos);
   };
 
   var handlePaletteImport = function handlePaletteImport() {
     try {
       var newPalette = JSON.parse(importValue);
       newPalette.map(function (c) {
-        if (!Object(_utils_isHex__WEBPACK_IMPORTED_MODULE_26__["default"])(c)) {
+        if (!Object(_utils_isHex__WEBPACK_IMPORTED_MODULE_25__["default"])(c)) {
           throw Error("Invalid Hex code provided");
         }
       });
       setPalette(newPalette);
+
+      var _availableCombos = Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(newPalette, contrastRatio);
+
+      setAvailableCombos(_availableCombos);
     } catch (error) {
       setImportError(true);
     }
@@ -111150,14 +111224,14 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 376
+      lineNumber: 385
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     width: [1],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 390
+      lineNumber: 399
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111167,7 +111241,7 @@ var MainUI = function MainUI(_ref) {
     textAlign: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 391
+      lineNumber: 400
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -111179,7 +111253,7 @@ var MainUI = function MainUI(_ref) {
     color: activeTab === "url" ? "blue.4" : "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 392
+      lineNumber: 401
     },
     __self: this
   }, "URL"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -111191,7 +111265,7 @@ var MainUI = function MainUI(_ref) {
     color: activeTab === "palx" ? "blue.4" : "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 402
+      lineNumber: 411
     },
     __self: this
   }, "Palx"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -111203,7 +111277,7 @@ var MainUI = function MainUI(_ref) {
     color: activeTab === "colorbox" ? "blue.4" : "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 413
+      lineNumber: 422
     },
     __self: this
   }, "ColorBox"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -111215,7 +111289,7 @@ var MainUI = function MainUI(_ref) {
     color: activeTab === "image" ? "blue.4" : "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 423
+      lineNumber: 432
     },
     __self: this
   }, "Image"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -111224,14 +111298,13 @@ var MainUI = function MainUI(_ref) {
     mr: 3,
     fontWeight: 700,
     fontSize: 2,
-    display: "none",
     color: activeTab === "text" ? "blue.4" : "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 433
+      lineNumber: 442
     },
     __self: this
-  }, "Json")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
+  }, "JSON")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
     display: ["none", "block"],
     position: "absolute",
     top: 0,
@@ -111244,7 +111317,7 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 445
+      lineNumber: 453
     },
     __self: this
   }, "Export"), activeTab === "url" && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111254,14 +111327,14 @@ var MainUI = function MainUI(_ref) {
     maxWidth: "32rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 459
+      lineNumber: 467
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SiteFetch, {
     onSubmit: handleSiteFetch,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 460
+      lineNumber: 468
     },
     __self: this
   })), activeTab === "image" && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
@@ -111272,13 +111345,13 @@ var MainUI = function MainUI(_ref) {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 466
+      lineNumber: 474
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 467
+      lineNumber: 475
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -111296,7 +111369,7 @@ var MainUI = function MainUI(_ref) {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 468
+      lineNumber: 476
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -111317,27 +111390,27 @@ var MainUI = function MainUI(_ref) {
     htmlFor: "imageUpload",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 480
+      lineNumber: 488
     },
     __self: this
   }, "Upload image")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 497
+      lineNumber: 505
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(P, {
     textAlign: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 498
+      lineNumber: 506
     },
     __self: this
   }, "or")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     ml: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 500
+      lineNumber: 508
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Button, {
@@ -111361,7 +111434,7 @@ var MainUI = function MainUI(_ref) {
     onClick: handleFetchFromUnsplash,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 501
+      lineNumber: 509
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Icon, {
@@ -111370,14 +111443,14 @@ var MainUI = function MainUI(_ref) {
     type: "unsplash",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 521
+      lineNumber: 529
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     pl: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 522
+      lineNumber: 530
     },
     __self: this
   }, "Unsplash photo")))), imageLoading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
@@ -111385,27 +111458,27 @@ var MainUI = function MainUI(_ref) {
     justifyContent: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 528
+      lineNumber: 536
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(LoadingBars, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 529
+      lineNumber: 537
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(P, {
     ml: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 530
+      lineNumber: 538
     },
     __self: this
   }, "Fetching Palette")), paletteImage && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 536
+      lineNumber: 544
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -111413,7 +111486,7 @@ var MainUI = function MainUI(_ref) {
     onClick: handleClearPalette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 537
+      lineNumber: 545
     },
     __self: this
   }, "Clear Image")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111421,14 +111494,14 @@ var MainUI = function MainUI(_ref) {
     mx: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 542
+      lineNumber: 550
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Img, {
     src: paletteImage.url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 543
+      lineNumber: 551
     },
     __self: this
   }), paletteImage.name && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(P, {
@@ -111436,27 +111509,27 @@ var MainUI = function MainUI(_ref) {
     fontSize: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 545
+      lineNumber: 553
     },
     __self: this
   }, "Photo by", " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextLink, {
     href: "https://unsplash.com/@".concat(paletteImage.username),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 547
+      lineNumber: 555
     },
     __self: this
   }, paletteImage.name), " ", "on", " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextLink, {
     href: "https://unsplash.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 553
+      lineNumber: 561
     },
     __self: this
   }, "Unsplash"))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 562
+      lineNumber: 570
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111468,7 +111541,7 @@ var MainUI = function MainUI(_ref) {
     alignItems: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 563
+      lineNumber: 571
     },
     __self: this
   }, activeTab === "palx" && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Form, {
@@ -111482,7 +111555,7 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 572
+      lineNumber: 580
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
@@ -111493,7 +111566,7 @@ var MainUI = function MainUI(_ref) {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 580
+      lineNumber: 588
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextInput, {
@@ -111505,10 +111578,10 @@ var MainUI = function MainUI(_ref) {
     bg: palxColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 585
+      lineNumber: 593
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextInput, (_React$createElement = {
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextInput, {
     type: "text",
     value: palxColor,
     onChange: handlePalxColor,
@@ -111516,11 +111589,16 @@ var MainUI = function MainUI(_ref) {
     fontWeight: 700,
     py: 3,
     px: 3,
-    width: [3 / 4]
-  }, _defineProperty(_React$createElement, "type", "url"), _defineProperty(_React$createElement, "border", "0"), _defineProperty(_React$createElement, "bg", "gray.8"), _defineProperty(_React$createElement, "borderRadius", 0), _defineProperty(_React$createElement, "__source", {
-    fileName: _jsxFileName,
-    lineNumber: 593
-  }), _defineProperty(_React$createElement, "__self", this), _React$createElement)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Button, {
+    width: [3 / 4],
+    border: "0",
+    bg: "gray.8",
+    borderRadius: 0,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 601
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Button, {
     py: 3,
     width: 1 / 4,
     bg: "gray.3",
@@ -111528,6 +111606,7 @@ var MainUI = function MainUI(_ref) {
     color: "white",
     fontWeight: 700,
     border: "none",
+    type: "button",
     style: {
       cursor: "pointer",
       minWidth: 128
@@ -111535,36 +111614,37 @@ var MainUI = function MainUI(_ref) {
     onClick: handleUsePalx,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 607
+      lineNumber: 614
     },
     __self: this
-  }, "Generate"), " ")), activeTab === "colorbox" && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Colorbox__WEBPACK_IMPORTED_MODULE_24__["default"], {
+  }, "Generate"), " ")), activeTab === "colorbox" && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Colorbox__WEBPACK_IMPORTED_MODULE_23__["default"], {
     onAddPalette: handleColorBoxAdd,
     onReplacePalette: handleColorBoxReplace,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 625
+      lineNumber: 633
     },
     __self: this
   }), activeTab === "text" && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     px: 3,
+    mb: 3,
     mx: "auto",
     maxWidth: "32rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 632
+      lineNumber: 640
     },
     __self: this
   }, importError && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(P, {
     color: "red.4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 634
+      lineNumber: 642
     },
     __self: this
   }, "There is something wrong with the JSON provided"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Textarea, {
     border: "1px solid",
-    borderColor: "gray.8",
+    borderColor: "gray.6",
     p: 3,
     width: 1,
     borderRadius: 1,
@@ -111577,21 +111657,31 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 639
+      lineNumber: 647
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
+    textAlign: "center",
+    mt: 2,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 660
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ButtonOutline, {
+    color: "black",
+    borderColor: "black",
     onClick: handlePaletteImport,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 652
+      lineNumber: 661
     },
     __self: this
-  }, "Import Palette")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
+  }, "Import JSON"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     px: [3, 5, 6],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 658
+      lineNumber: 668
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Palette, {
@@ -111602,7 +111692,7 @@ var MainUI = function MainUI(_ref) {
     onAddColor: handleAddColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 659
+      lineNumber: 669
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111610,7 +111700,7 @@ var MainUI = function MainUI(_ref) {
     my: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 666
+      lineNumber: 676
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -111620,7 +111710,7 @@ var MainUI = function MainUI(_ref) {
     onClick: handleClearPalette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 667
+      lineNumber: 677
     },
     __self: this
   }, "Clear palette"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -111630,7 +111720,7 @@ var MainUI = function MainUI(_ref) {
     onClick: onShowCombinations,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 675
+      lineNumber: 685
     },
     __self: this
   }, "View ", availableCombos.length, " accessible combinations")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111638,7 +111728,7 @@ var MainUI = function MainUI(_ref) {
     mx: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 684
+      lineNumber: 694
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CombinationTools, {
@@ -111653,7 +111743,7 @@ var MainUI = function MainUI(_ref) {
     onColorClick: handleColorClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 685
+      lineNumber: 695
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111661,7 +111751,7 @@ var MainUI = function MainUI(_ref) {
     dataName: "stats",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 697
+      lineNumber: 707
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dl, {
@@ -111672,7 +111762,7 @@ var MainUI = function MainUI(_ref) {
     mb: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 698
+      lineNumber: 708
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dt, {
@@ -111680,7 +111770,7 @@ var MainUI = function MainUI(_ref) {
     width: 3 / 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 705
+      lineNumber: 715
     },
     __self: this
   }, "Accessible Combinations"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dd, {
@@ -111691,7 +111781,7 @@ var MainUI = function MainUI(_ref) {
     textAlign: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 708
+      lineNumber: 718
     },
     __self: this
   }, availableCombos.length)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dl, {
@@ -111703,7 +111793,7 @@ var MainUI = function MainUI(_ref) {
     pb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 718
+      lineNumber: 728
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dt, {
@@ -111711,7 +111801,7 @@ var MainUI = function MainUI(_ref) {
     width: 3 / 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 726
+      lineNumber: 736
     },
     __self: this
   }, "Combos with Parent Bg"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Dd, {
@@ -111722,7 +111812,7 @@ var MainUI = function MainUI(_ref) {
     textAlign: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 729
+      lineNumber: 739
     },
     __self: this
   }, (availableCombos.length * palette.length).toLocaleString()))), paletteModalIsOpen && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(PaletteModal, {
@@ -111730,7 +111820,7 @@ var MainUI = function MainUI(_ref) {
     palette: palette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 742
+      lineNumber: 752
     },
     __self: this
   }))), currentPickerColor.color && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_outside_click_handler__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -111743,7 +111833,7 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 751
+      lineNumber: 761
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ColorPicker, {
@@ -111752,7 +111842,7 @@ var MainUI = function MainUI(_ref) {
     onRemoveColor: handleRemoveColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 760
+      lineNumber: 770
     },
     __self: this
   })))), !lodash_isEmpty__WEBPACK_IMPORTED_MODULE_8___default()(currentCombination) && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111760,7 +111850,7 @@ var MainUI = function MainUI(_ref) {
     bg: currentCombination.parentBg,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 770
+      lineNumber: 780
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111771,10 +111861,10 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 771
+      lineNumber: 781
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_PlayerControls__WEBPACK_IMPORTED_MODULE_23__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_PlayerControls__WEBPACK_IMPORTED_MODULE_22__["default"], {
     currentCombination: currentCombination,
     pinnedColors: pinnedColors,
     onPrevious: handlePrevious,
@@ -111786,16 +111876,16 @@ var MainUI = function MainUI(_ref) {
     onColorClick: handleColorClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 776
+      lineNumber: 786
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Preview__WEBPACK_IMPORTED_MODULE_22__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Preview__WEBPACK_IMPORTED_MODULE_21__["default"], {
     borderWidth: borderWidth,
     boxPadding: boxPadding,
     currentCombination: currentCombination,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 787
+      lineNumber: 797
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111804,7 +111894,7 @@ var MainUI = function MainUI(_ref) {
     pb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 792
+      lineNumber: 802
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111816,7 +111906,7 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 793
+      lineNumber: 803
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
@@ -111826,7 +111916,7 @@ var MainUI = function MainUI(_ref) {
     flexWrap: "wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 799
+      lineNumber: 809
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111834,7 +111924,7 @@ var MainUI = function MainUI(_ref) {
     order: [1, 2],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 805
+      lineNumber: 810
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(H4, {
@@ -111842,14 +111932,14 @@ var MainUI = function MainUI(_ref) {
     mb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 806
+      lineNumber: 811
     },
     __self: this
   }, "Docs"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     mb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 807
+      lineNumber: 814
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SlabStat, {
@@ -111858,7 +111948,7 @@ var MainUI = function MainUI(_ref) {
     mr: 5,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 808
+      lineNumber: 815
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SlabStat, {
@@ -111867,7 +111957,7 @@ var MainUI = function MainUI(_ref) {
     mr: 5,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 813
+      lineNumber: 816
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SlabStat, {
@@ -111875,14 +111965,14 @@ var MainUI = function MainUI(_ref) {
     description: availableCombos.length * palette.length,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 818
+      lineNumber: 821
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_ColorTable__WEBPACK_IMPORTED_MODULE_25__["default"], {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_ColorTable__WEBPACK_IMPORTED_MODULE_24__["default"], {
     colors: palette,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 824
+      lineNumber: 827
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111890,7 +111980,7 @@ var MainUI = function MainUI(_ref) {
     textAlign: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 825
+      lineNumber: 828
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -111905,7 +111995,7 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 826
+      lineNumber: 829
     },
     __self: this
   }, "Export Palette"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -111914,21 +112004,21 @@ var MainUI = function MainUI(_ref) {
     px: [3, 4],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 839
+      lineNumber: 842
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(H4, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 840
+      lineNumber: 843
     },
     __self: this
   }, "Settings"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     maxWidth: "24rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 841
+      lineNumber: 844
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -111937,10 +112027,10 @@ var MainUI = function MainUI(_ref) {
     fontWeight: 700,
     fontSize: 3,
     mr: 2,
-    for: "border-width",
+    htmlFor: "border-width",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 842
+      lineNumber: 845
     },
     __self: this
   }, "Border width"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -111956,17 +112046,17 @@ var MainUI = function MainUI(_ref) {
     width: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 845
+      lineNumber: 855
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
     display: "block",
     fontWeight: 700,
     fontSize: 3,
-    for: "box-padding",
+    htmlFor: "box-padding",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 857
+      lineNumber: 867
     },
     __self: this
   }, "Box padding"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -111982,14 +112072,14 @@ var MainUI = function MainUI(_ref) {
     width: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 860
+      lineNumber: 875
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Form, {
     pt: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 873
+      lineNumber: 888
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Fieldset, {
@@ -111997,7 +112087,7 @@ var MainUI = function MainUI(_ref) {
     p: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 874
+      lineNumber: 889
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Legend, {
@@ -112005,7 +112095,7 @@ var MainUI = function MainUI(_ref) {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 875
+      lineNumber: 890
     },
     __self: this
   }, "Contrast ratio"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
@@ -112013,14 +112103,14 @@ var MainUI = function MainUI(_ref) {
     py: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 878
+      lineNumber: 893
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 879
+      lineNumber: 894
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -112032,7 +112122,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 880
+      lineNumber: 895
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -112041,28 +112131,28 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 888
+      lineNumber: 903
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 889
+      lineNumber: 904
     },
     __self: this
   }, "3 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 890
+      lineNumber: 905
     },
     __self: this
   }, "AA large"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 893
+      lineNumber: 908
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -112074,7 +112164,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 894
+      lineNumber: 909
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -112083,28 +112173,28 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 902
+      lineNumber: 917
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 903
+      lineNumber: 918
     },
     __self: this
   }, "4.5 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 904
+      lineNumber: 919
     },
     __self: this
   }, "AA"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
     px: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 907
+      lineNumber: 922
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Input, {
@@ -112116,7 +112206,7 @@ var MainUI = function MainUI(_ref) {
     mr: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 908
+      lineNumber: 923
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Label, {
@@ -112125,27 +112215,27 @@ var MainUI = function MainUI(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 916
+      lineNumber: 931
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontWeight: 800,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 917
+      lineNumber: 932
     },
     __self: this
   }, "7:1 "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Span, {
     fontSize: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 918
+      lineNumber: 933
     },
     __self: this
   }, "AAA")))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 924
+      lineNumber: 939
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ColorBlindFilter, {
@@ -112154,7 +112244,7 @@ var MainUI = function MainUI(_ref) {
     maxWidth: "24rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 925
+      lineNumber: 940
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -112163,7 +112253,7 @@ var MainUI = function MainUI(_ref) {
     maxWidth: "24rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 932
+      lineNumber: 946
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Likes, {
@@ -112173,26 +112263,26 @@ var MainUI = function MainUI(_ref) {
     onClearLikes: handleClearLikes,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 933
+      lineNumber: 947
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SiteFooter, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 944
+      lineNumber: 957
     },
     __self: this
   })));
 };
 
 var Index = function Index() {
-  var _useState33 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(Object(_utils_sortPalette__WEBPACK_IMPORTED_MODULE_19__["default"])(_utils_defaultPalette__WEBPACK_IMPORTED_MODULE_17__["default"])),
+  var _useState33 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(Object(_utils_sortPalette__WEBPACK_IMPORTED_MODULE_18__["default"])(_utils_defaultPalette__WEBPACK_IMPORTED_MODULE_16__["default"])),
       _useState34 = _slicedToArray(_useState33, 2),
       palette = _useState34[0],
       setPalette = _useState34[1];
 
   var _useState35 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(function () {
-    return Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_20__["default"])(_utils_defaultPalette__WEBPACK_IMPORTED_MODULE_17__["default"], 4.5);
+    return Object(_utils_getAllCombos__WEBPACK_IMPORTED_MODULE_19__["default"])(_utils_defaultPalette__WEBPACK_IMPORTED_MODULE_16__["default"], 4.5);
   }),
       _useState36 = _slicedToArray(_useState35, 2),
       availableCombos = _useState36[0],
@@ -112210,7 +112300,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 959
+      lineNumber: 972
     },
     __self: this
   }) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(MainUI, {
@@ -112223,7 +112313,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 964
+      lineNumber: 977
     },
     __self: this
   });
@@ -112248,7 +112338,7 @@ var Index = function Index() {
       }
     })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/")
   
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/TextButton.js */ "./components/TextButton.js")["default"], __webpack_require__(/*! ./components/SiteFetch.js */ "./components/SiteFetch.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./elements/Input.js */ "./elements/Input.js")["default"], __webpack_require__(/*! ./elements/Label.js */ "./elements/Label.js")["default"], __webpack_require__(/*! ./elements/P.js */ "./elements/P.js")["default"], __webpack_require__(/*! ./elements/Button.js */ "./elements/Button.js")["default"], __webpack_require__(/*! ./components/Icon.js */ "./components/Icon.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"], __webpack_require__(/*! ./components/LoadingBars.js */ "./components/LoadingBars.js")["default"], __webpack_require__(/*! ./elements/Img.js */ "./elements/Img.js")["default"], __webpack_require__(/*! ./components/TextLink.js */ "./components/TextLink.js")["default"], __webpack_require__(/*! ./elements/Form.js */ "./elements/Form.js")["default"], __webpack_require__(/*! ./components/TextInput.js */ "./components/TextInput.js")["default"], __webpack_require__(/*! ./elements/Textarea.js */ "./elements/Textarea.js")["default"], __webpack_require__(/*! ./components/Palette.js */ "./components/Palette.js")["default"], __webpack_require__(/*! ./components/CombinationTools.js */ "./components/CombinationTools.js")["default"], __webpack_require__(/*! ./elements/Dl.js */ "./elements/Dl.js")["default"], __webpack_require__(/*! ./elements/Dt.js */ "./elements/Dt.js")["default"], __webpack_require__(/*! ./elements/Dd.js */ "./elements/Dd.js")["default"], __webpack_require__(/*! ./components/PaletteModal.js */ "./components/PaletteModal.js")["default"], __webpack_require__(/*! ./components/ColorPicker.js */ "./components/ColorPicker.js")["default"], __webpack_require__(/*! ./elements/H4.js */ "./elements/H4.js")["default"], __webpack_require__(/*! ./components/SlabStat.js */ "./components/SlabStat.js")["default"], __webpack_require__(/*! ./elements/Fieldset.js */ "./elements/Fieldset.js")["default"], __webpack_require__(/*! ./elements/Legend.js */ "./elements/Legend.js")["default"], __webpack_require__(/*! ./components/ColorBlindFilter.js */ "./components/ColorBlindFilter.js")["default"], __webpack_require__(/*! ./components/Likes.js */ "./components/Likes.js")["default"], __webpack_require__(/*! ./components/SiteFooter.js */ "./components/SiteFooter.js")["default"], __webpack_require__(/*! ./components/Combinations.js */ "./components/Combinations.js")["default"], __webpack_require__(/*! ./../node_modules/next/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/TextButton.js */ "./components/TextButton.js")["default"], __webpack_require__(/*! ./components/SiteFetch.js */ "./components/SiteFetch.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./elements/Input.js */ "./elements/Input.js")["default"], __webpack_require__(/*! ./elements/Label.js */ "./elements/Label.js")["default"], __webpack_require__(/*! ./elements/P.js */ "./elements/P.js")["default"], __webpack_require__(/*! ./elements/Button.js */ "./elements/Button.js")["default"], __webpack_require__(/*! ./components/Icon.js */ "./components/Icon.js")["default"], __webpack_require__(/*! ./elements/Span.js */ "./elements/Span.js")["default"], __webpack_require__(/*! ./components/LoadingBars.js */ "./components/LoadingBars.js")["default"], __webpack_require__(/*! ./elements/Img.js */ "./elements/Img.js")["default"], __webpack_require__(/*! ./components/TextLink.js */ "./components/TextLink.js")["default"], __webpack_require__(/*! ./elements/Form.js */ "./elements/Form.js")["default"], __webpack_require__(/*! ./components/TextInput.js */ "./components/TextInput.js")["default"], __webpack_require__(/*! ./elements/Textarea.js */ "./elements/Textarea.js")["default"], __webpack_require__(/*! ./components/ButtonOutline.js */ "./components/ButtonOutline.js")["default"], __webpack_require__(/*! ./components/Palette.js */ "./components/Palette.js")["default"], __webpack_require__(/*! ./components/CombinationTools.js */ "./components/CombinationTools.js")["default"], __webpack_require__(/*! ./elements/Dl.js */ "./elements/Dl.js")["default"], __webpack_require__(/*! ./elements/Dt.js */ "./elements/Dt.js")["default"], __webpack_require__(/*! ./elements/Dd.js */ "./elements/Dd.js")["default"], __webpack_require__(/*! ./components/PaletteModal.js */ "./components/PaletteModal.js")["default"], __webpack_require__(/*! ./components/ColorPicker.js */ "./components/ColorPicker.js")["default"], __webpack_require__(/*! ./elements/H4.js */ "./elements/H4.js")["default"], __webpack_require__(/*! ./components/SlabStat.js */ "./components/SlabStat.js")["default"], __webpack_require__(/*! ./elements/Fieldset.js */ "./elements/Fieldset.js")["default"], __webpack_require__(/*! ./elements/Legend.js */ "./elements/Legend.js")["default"], __webpack_require__(/*! ./components/ColorBlindFilter.js */ "./components/ColorBlindFilter.js")["default"], __webpack_require__(/*! ./components/Likes.js */ "./components/Likes.js")["default"], __webpack_require__(/*! ./components/SiteFooter.js */ "./components/SiteFooter.js")["default"], __webpack_require__(/*! ./components/Combinations.js */ "./components/Combinations.js")["default"], __webpack_require__(/*! ./../node_modules/next/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
@@ -112778,9 +112868,7 @@ var getContrastScore = function getContrastScore(colorOne, colorTwo) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (h) {
-  var hexMinusHash = h.replace("#", "");
-  var a = parseInt(hexMinusHash, 16);
-  return a.toString(16) === hexMinusHash.toLowerCase();
+  return /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(h);
 });
 
 /***/ }),
