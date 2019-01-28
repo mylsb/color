@@ -3367,7 +3367,7 @@ var CombinationTools = function CombinationTools(_ref2) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(Div, Flex, ButtonIcon, H4, MiniTextBlock, Button) {/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emotion */ "./node_modules/emotion/dist/index.esm.js");
+/* WEBPACK VAR INJECTION */(function(Div, Flex, ButtonIcon, H4, MiniTextBlock, ButtonOutline) {/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emotion */ "./node_modules/emotion/dist/index.esm.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var lodash_chunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/chunk */ "./node_modules/lodash/chunk.js");
@@ -3506,13 +3506,17 @@ var Combinations = function Combinations(_ref) {
       __self: this
     }));
   }), combinationsLeftToView && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
-    width: [1, 1 / 2, 1 / 4],
+    width: 1,
+    py: 4,
+    textAlign: "center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ButtonOutline, {
+    color: "gray.0",
+    borderColor: "gray.0",
     type: "button",
     onClick: handleLoadMore,
     __source: {
@@ -3520,11 +3524,11 @@ var Combinations = function Combinations(_ref) {
       lineNumber: 63
     },
     __self: this
-  }, "Load more..."))));
+  }, "Load more combos"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Combinations);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./components/ButtonIcon.js */ "./components/ButtonIcon.js")["default"], __webpack_require__(/*! ./elements/H4.js */ "./elements/H4.js")["default"], __webpack_require__(/*! ./components/MiniTextBlock.js */ "./components/MiniTextBlock.js")["default"], __webpack_require__(/*! ./elements/Button.js */ "./elements/Button.js")["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./elements/Div.js */ "./elements/Div.js")["default"], __webpack_require__(/*! ./components/Flex.js */ "./components/Flex.js")["default"], __webpack_require__(/*! ./components/ButtonIcon.js */ "./components/ButtonIcon.js")["default"], __webpack_require__(/*! ./elements/H4.js */ "./elements/H4.js")["default"], __webpack_require__(/*! ./components/MiniTextBlock.js */ "./components/MiniTextBlock.js")["default"], __webpack_require__(/*! ./components/ButtonOutline.js */ "./components/ButtonOutline.js")["default"]))
 
 /***/ }),
 
