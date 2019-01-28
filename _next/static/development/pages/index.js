@@ -9188,7 +9188,7 @@ var SiteFooter = function SiteFooter(_ref) {
         lineHeight: 1.5,
         fontSize: 2,
         display: "block",
-        href: "https://github.com/cssstats/cssstats",
+        href: "https://cssstats.com",
         children: "Css Stats",
         __source: {
           fileName: _jsxFileName,
