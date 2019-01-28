@@ -7435,7 +7435,7 @@ var _jsxFileName = "/Users/mrmrs/w/color/components/LoadingBars.js";
     dur: "1.2s",
     repeatCount: "indefinite",
     begin: "0",
-    keytimes: "0;.2;.5;1",
+    keyTimes: "0;.2;.5;1",
     keySplines: "0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8",
     calcMode: "spline",
     __source: {
@@ -7457,7 +7457,7 @@ var _jsxFileName = "/Users/mrmrs/w/color/components/LoadingBars.js";
     dur: "1.2s",
     repeatCount: "indefinite",
     begin: "0.2",
-    keytimes: "0;.2;.5;1",
+    keyTimes: "0;.2;.5;1",
     keySplines: "0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8",
     calcMode: "spline",
     __source: {
@@ -7479,7 +7479,7 @@ var _jsxFileName = "/Users/mrmrs/w/color/components/LoadingBars.js";
     dur: "1.2s",
     repeatCount: "indefinite",
     begin: "0.4",
-    keytimes: "0;.2;.5;1",
+    keyTimes: "0;.2;.5;1",
     keySplines: "0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8",
     calcMode: "spline",
     __source: {
@@ -7501,7 +7501,7 @@ var _jsxFileName = "/Users/mrmrs/w/color/components/LoadingBars.js";
     dur: "1.2s",
     repeatCount: "indefinite",
     begin: "0.6",
-    keytimes: "0;.2;.5;1",
+    keyTimes: "0;.2;.5;1",
     keySplines: "0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8",
     calcMode: "spline",
     __source: {
@@ -7523,7 +7523,7 @@ var _jsxFileName = "/Users/mrmrs/w/color/components/LoadingBars.js";
     dur: "1.2s",
     repeatCount: "indefinite",
     begin: "0.8",
-    keytimes: "0;.2;.5;1",
+    keyTimes: "0;.2;.5;1",
     keySplines: "0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8",
     calcMode: "spline",
     __source: {
@@ -8134,6 +8134,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_camelCase__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash_camelCase__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! js-beautify */ "./node_modules/js-beautify/js/index.js");
 /* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(js_beautify__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _utils_isHex__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/isHex */ "./utils/isHex.js");
 
 
 var _jsxFileName = "/Users/mrmrs/w/color/components/PaletteModal.js";
@@ -8149,6 +8150,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -8186,24 +8188,27 @@ var PaletteModal = function PaletteModal(_ref) {
     var _ref2 = _asyncToGenerator(
     /*#__PURE__*/
     _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(palette) {
-      var paletteString, res, _ref3, colors, newData;
+      var validPalette, paletteString, res, _ref3, colors, newData;
 
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              paletteString = palette.map(function (p) {
+              validPalette = palette.filter(function (p) {
+                return Object(_utils_isHex__WEBPACK_IMPORTED_MODULE_7__["default"])(p);
+              });
+              paletteString = validPalette.map(function (p) {
                 return p.substr(1);
               }).join(",");
-              _context.next = 3;
+              _context.next = 4;
               return fetch("https://api.color.pizza/v1/".concat(paletteString));
 
-            case 3:
+            case 4:
               res = _context.sent;
-              _context.next = 6;
+              _context.next = 7;
               return res.json();
 
-            case 6:
+            case 7:
               _ref3 = _context.sent;
               colors = _ref3.colors;
               newData = colors.map(function (c) {
@@ -8214,7 +8219,7 @@ var PaletteModal = function PaletteModal(_ref) {
               });
               setData(newData);
 
-            case 10:
+            case 11:
             case "end":
               return _context.stop();
           }
@@ -8269,7 +8274,7 @@ var PaletteModal = function PaletteModal(_ref) {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_outside_click_handler__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -8278,7 +8283,7 @@ var PaletteModal = function PaletteModal(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 70
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
@@ -8289,7 +8294,7 @@ var PaletteModal = function PaletteModal(_ref) {
     maxWidth: "60rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 71
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Flex, {
@@ -8298,7 +8303,7 @@ var PaletteModal = function PaletteModal(_ref) {
     mb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 78
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -8306,7 +8311,7 @@ var PaletteModal = function PaletteModal(_ref) {
     onClick: handleActiveTab("json"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 79
     },
     __self: this
   }, "JSON"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -8314,7 +8319,7 @@ var PaletteModal = function PaletteModal(_ref) {
     onClick: handleActiveTab("css"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 82
     },
     __self: this
   }, "CSS variables"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -8322,7 +8327,7 @@ var PaletteModal = function PaletteModal(_ref) {
     onClick: handleActiveTab("sass"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 85
     },
     __self: this
   }, "Sass variables"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -8330,7 +8335,7 @@ var PaletteModal = function PaletteModal(_ref) {
     onClick: handleActiveTab("js"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 88
     },
     __self: this
   }, "JS theme file"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TextButton, {
@@ -8342,7 +8347,7 @@ var PaletteModal = function PaletteModal(_ref) {
     ml: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 91
     },
     __self: this
   }, "Close")), activeTab === "json" && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -8351,19 +8356,19 @@ var PaletteModal = function PaletteModal(_ref) {
     borderColor: "gray.7",
     borderRadius: 2,
     style: {
-      overflow: 'hidden'
+      overflow: "hidden"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 102
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Textarea, {
     width: 1,
     bg: "gray.9",
     style: {
-      minHeight: '16rem',
-      height: '75vh',
+      minHeight: "16rem",
+      height: "75vh",
       border: 0
     },
     p: 4,
@@ -8372,7 +8377,7 @@ var PaletteModal = function PaletteModal(_ref) {
     value: formatAsJson(),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 109
     },
     __self: this
   })), activeTab === "css" && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -8381,19 +8386,19 @@ var PaletteModal = function PaletteModal(_ref) {
     borderColor: "gray.8",
     borderRadius: 2,
     style: {
-      overflow: 'hidden'
+      overflow: "hidden"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 122
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Textarea, {
     width: 1,
     bg: "gray.9",
     style: {
-      minHeight: '16rem',
-      height: '75vh',
+      minHeight: "16rem",
+      height: "75vh",
       border: 0
     },
     p: 4,
@@ -8406,7 +8411,7 @@ var PaletteModal = function PaletteModal(_ref) {
     Object(js_beautify__WEBPACK_IMPORTED_MODULE_6__["css"])(formatAsCSS()),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 129
     },
     __self: this
   })), activeTab === "sass" && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -8415,19 +8420,19 @@ var PaletteModal = function PaletteModal(_ref) {
     borderColor: "gray.8",
     borderRadius: 2,
     style: {
-      overflow: 'hidden'
+      overflow: "hidden"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 142
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Textarea, {
     width: 1,
     bg: "gray.9",
     style: {
-      minHeight: '16rem',
-      height: '75vh',
+      minHeight: "16rem",
+      height: "75vh",
       border: 0
     },
     p: 4,
@@ -8440,7 +8445,7 @@ var PaletteModal = function PaletteModal(_ref) {
     Object(js_beautify__WEBPACK_IMPORTED_MODULE_6__["css"])(formatAsSass()),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 149
     },
     __self: this
   })), activeTab === "js" && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Div, {
@@ -8449,19 +8454,19 @@ var PaletteModal = function PaletteModal(_ref) {
     borderColor: "gray.8",
     borderRadius: 2,
     style: {
-      overflow: 'hidden'
+      overflow: "hidden"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 162
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Textarea, {
     width: 1,
     bg: "gray.9",
     style: {
-      minHeight: '16rem',
-      height: '75vh',
+      minHeight: "16rem",
+      height: "75vh",
       border: 0
     },
     p: 4,
@@ -8470,7 +8475,7 @@ var PaletteModal = function PaletteModal(_ref) {
     value: Object(js_beautify__WEBPACK_IMPORTED_MODULE_6__["js"])(formatAsJS()),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 169
     },
     __self: this
   })))));
