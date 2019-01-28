@@ -12795,7 +12795,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var idb_keyval__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! idb-keyval */ "./node_modules/idb-keyval/dist/idb-keyval.mjs");
 /* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../theme */ "./theme.js");
 
-var _jsxFileName = "/Users/mrmrs/w/color/pages/_app.js";
+var _jsxFileName = "/Users/sammdc/w/color/pages/_app.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -12956,24 +12956,32 @@ function (_App) {
           lineNumber: 53
         },
         __self: this
-      }, "Color - Cloudflare Design")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(emotion_theming__WEBPACK_IMPORTED_MODULE_7__["ThemeProvider"], {
+      }, "Color - Cloudflare Design"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("meta", {
+        name: "description",
+        content: "A color palette tool for interface design",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(emotion_theming__WEBPACK_IMPORTED_MODULE_7__["ThemeProvider"], {
         theme: _theme__WEBPACK_IMPORTED_MODULE_10__["default"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 59
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(unistore_react__WEBPACK_IMPORTED_MODULE_6__["Provider"], {
         store: store,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 60
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, _extends({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 61
         },
         __self: this
       })))));
