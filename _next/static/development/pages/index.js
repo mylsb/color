@@ -8632,7 +8632,7 @@ var SiteFooter = function SiteFooter(_ref) {
           lineNumber: 30
         },
         __self: this
-      }, "We're growing our teams in San Francisco, London, and Austin! We welcome applications from everyone and especially encourage underrepresented minorities to apply."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(P, {
+      }, "We're growing our teams in San Francisco, London, and Austin! We welcome applications from everyone and especially encourage applications from underrepresented minorities."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(P, {
         fontSize: 2,
         __source: {
           fileName: _jsxFileName,
@@ -8648,11 +8648,27 @@ var SiteFooter = function SiteFooter(_ref) {
           lineNumber: 34
         },
         __self: this
-      }, "designjobs@cloudflare.com"), " with your portfolio and 3-5 sentences about why you're interested in joining our team.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
-        width: [1, 1 / 4],
+      }, "designjobs@cloudflare.com"), " with your portfolio and 3-5 sentences about why you're interested in joining our team."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(P, {
+        fontSize: 2,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
+      }, "You can find our ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
+        color: "gray.0",
+        href: "https://www.cloudflare.com/careers/departments/",
+        fontWeight: 600,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 37
+        },
+        __self: this
+      }, "open positions here"), ".")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
+        width: [1, 1 / 4],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H4, {
@@ -8661,7 +8677,7 @@ var SiteFooter = function SiteFooter(_ref) {
         mt: [4, 0],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 41
         },
         __self: this
       }, "Colophon"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
@@ -8673,7 +8689,7 @@ var SiteFooter = function SiteFooter(_ref) {
         children: "Chroma",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 42
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
@@ -8685,7 +8701,7 @@ var SiteFooter = function SiteFooter(_ref) {
         children: "Colorable",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 43
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
@@ -8697,7 +8713,7 @@ var SiteFooter = function SiteFooter(_ref) {
         children: "ColorBox",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 44
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
@@ -8709,7 +8725,7 @@ var SiteFooter = function SiteFooter(_ref) {
         children: "Css Stats",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 45
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
@@ -8721,7 +8737,7 @@ var SiteFooter = function SiteFooter(_ref) {
         children: "Palx",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 46
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
@@ -8733,7 +8749,7 @@ var SiteFooter = function SiteFooter(_ref) {
         children: "Unsplash",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 47
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
@@ -8742,7 +8758,7 @@ var SiteFooter = function SiteFooter(_ref) {
         textAlign: ['left', 'right'],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 49
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
@@ -8754,7 +8770,7 @@ var SiteFooter = function SiteFooter(_ref) {
         fontWeight: 700,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 50
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
@@ -8764,14 +8780,14 @@ var SiteFooter = function SiteFooter(_ref) {
         type: "github",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 58
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
         ml: 2,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 59
         },
         __self: this
       }, "GitHub"))));
