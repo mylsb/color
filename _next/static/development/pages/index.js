@@ -8764,7 +8764,7 @@ var SiteFooter = function SiteFooter(_ref) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
         href: "https://github.com/cloudflare-design",
         fontSize: 2,
-        color: "blue.4",
+        color: "gray.0",
         display: "inline-flex",
         alignItems: "center",
         fontWeight: 700,
