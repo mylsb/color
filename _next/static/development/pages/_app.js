@@ -12795,7 +12795,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var idb_keyval__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! idb-keyval */ "./node_modules/idb-keyval/dist/idb-keyval.mjs");
 /* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../theme */ "./theme.js");
 
-var _jsxFileName = "/Users/sammdc/w/color/pages/_app.js";
+var _jsxFileName = "/Users/mrmrs/w/color/pages/_app.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
